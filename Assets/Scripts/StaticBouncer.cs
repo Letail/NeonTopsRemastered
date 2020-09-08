@@ -13,7 +13,6 @@ public class StaticBouncer : MonoBehaviour
         if (collision.gameObject.GetComponent<Rigidbody>() != null)
         {
             rb = collision.gameObject.GetComponent<Rigidbody>();
-            Debug.Log("Bumper found a rigidbody");
 
             foreach (var point in collision.contacts)
             {
