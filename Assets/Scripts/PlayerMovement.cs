@@ -24,12 +24,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         //Read Value
