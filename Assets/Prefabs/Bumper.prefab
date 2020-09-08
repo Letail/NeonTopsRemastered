@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 932957764170523672}
   - component: {fileID: 3065030810399681683}
   - component: {fileID: 9199512565166551910}
-  - component: {fileID: 4250877347281789204}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4250877347281789204
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486378639577714890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1655284929632283685
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8643765189936575257}
+  - component: {fileID: 4115233751964948801}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Untagged
@@ -128,6 +114,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4115233751964948801
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655284929632283685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.305
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8840088018643002503
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +139,6 @@ GameObject:
   - component: {fileID: 3054889288233221960}
   - component: {fileID: 6166290100928084932}
   - component: {fileID: 2637397975317635992}
-  - component: {fileID: 7492596189142599401}
   m_Layer: 0
   m_Name: Torus
   m_TagString: Untagged
@@ -24244,17 +24242,3 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &7492596189142599401
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8840088018643002503}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
