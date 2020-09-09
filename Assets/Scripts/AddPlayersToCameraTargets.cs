@@ -6,6 +6,7 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 {
     public CameraMultiTarget cameraMultiTarget;
     List<GameObject> targets;
+    PlayerInputManager playerInputManager;
 
     void Start()
     {
@@ -22,5 +23,10 @@ public class AddPlayersToCameraTargets : MonoBehaviour
     {
         targets.Remove(playerInput.gameObject);
         cameraMultiTarget.SetTargets(targets.ToArray());
+    }
+
+    private void OnEnable()
+    {
+
     }
 }

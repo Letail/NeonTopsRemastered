@@ -2,13 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
-    private Vector2 inputMovement;
+
+    //Input Actions
+    private PlayerInputActions inputAction;
+    private Vector2 movementInput;
 
     public float maxSpeed;
 
@@ -23,11 +26,12 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        inputAction = new PlayerInputActions();
+        inputAction.Player.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
     }
     void Update()
     {
         //Read Value
-        Vector2 movementInput = inputMovement;
         Vector3 movementVector = new Vector3(movementInput.x, 0, movementInput.y);
         //Move Player
 
@@ -61,18 +65,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnMove(InputValue value)
+
+    private void OnEnable()
     {
-        inputMovement = value.Get<Vector2>();
+        inputAction.Enable();
     }
-
-    //private void OnEnable()
-    //{
-    //    playerControls.Enable();
-    //}
-    //private void OnDisable()
-    //{
-    //    playerControls.Disable();
-
-    //}
+    private void OnDisable()
+    {
+        inputAction.Disable();
+    }
 }
