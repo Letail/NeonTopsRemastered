@@ -67,4 +67,20 @@ public class SetPlayerColor : MonoBehaviour
         Debug.Log("Player Left"); 
         RemoveColorFromUsedList(playerInput.gameObject.GetComponent<Renderer>().material);
     }
+
+    private void OnEnable()
+    {
+        PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
+        PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
+    }
+
+    private void OnDisable()
+    {
+        if (PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+            PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
+
+        }
+    }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,7 +32,7 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     private void OnDisable()
     {
-        if(PlayerInputManager.instance != null)
+        if (PlayerInputManager.instance != null)
         {
             PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
             PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
