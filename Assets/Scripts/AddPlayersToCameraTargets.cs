@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,9 +7,8 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 {
     public CameraMultiTarget cameraMultiTarget;
     List<GameObject> targets;
-    PlayerInputManager playerInputManager;
 
-    void Start()
+    void Awake()
     {
         targets = new List<GameObject>();
     }
@@ -27,6 +27,17 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     private void OnEnable()
     {
+        PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
+        PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
+    }
 
+    private void OnDisable()
+    {
+        if(PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+            PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
+
+        }
     }
 }

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿/// Reference on the InputSystem API with SendMessage
+/// https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.PlayerInput.html?q=SendMessages
+
 using UnityEngine;
-//using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
-
-    //Input Actions
-    private PlayerInputActions inputAction;
     private Vector2 movementInput;
 
     public float maxSpeed;
@@ -26,17 +23,13 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        inputAction = new PlayerInputActions();
-        inputAction.Player.Move.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
     }
-    void Update()
+    void FixedUpdate()
     {
-        //Read Value
         Vector3 movementVector = new Vector3(movementInput.x, 0, movementInput.y);
-        //Move Player
 
-        if(useForce) MoveWithForce(movementVector);
-        if(useAcceleration) MoveWithAcceleration(movementVector);
+        if (useForce) MoveWithForce(movementVector);
+        if (useAcceleration) MoveWithAcceleration(movementVector);
     }
 
     private void MoveWithAcceleration(Vector3 movementVector)
@@ -65,13 +58,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    private void OnEnable()
+    public void OnMove(InputValue value)
     {
-        inputAction.Enable();
-    }
-    private void OnDisable()
-    {
-        inputAction.Disable();
+        movementInput = value.Get<Vector2>();
     }
 }
