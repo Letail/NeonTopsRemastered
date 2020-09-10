@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerInputManager))]
 public class SetPlayerColor : MonoBehaviour
 {
     private List<Material> skins;
@@ -15,11 +16,13 @@ public class SetPlayerColor : MonoBehaviour
 
     private void Awake()
     {
-        skins = new List<Material>();
-        skins.Add(skinPlayer1);
-        skins.Add(skinPlayer2);
-        skins.Add(skinPlayer3);
-        skins.Add(skinPlayer4);
+        skins = new List<Material>
+        {
+            skinPlayer1,
+            skinPlayer2,
+            skinPlayer3,
+            skinPlayer4
+        };
 
         skinsInUse = new List<Material>();
     }
