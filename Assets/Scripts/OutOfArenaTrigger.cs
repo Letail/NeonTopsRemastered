@@ -4,7 +4,7 @@
 public class OutOfArenaTrigger : MonoBehaviour
 {
     public delegate void OnPlayerOutOfArena(Transform trans);
-    public event OnPlayerOutOfArena OnPlayerOutOfArenaEvent;
+    public static event OnPlayerOutOfArena OnPlayerOutOfArenaEvent;
 
     private void Awake()
     {
