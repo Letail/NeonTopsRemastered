@@ -1,6 +1,7 @@
 ﻿///InterpolationController - https://www.kinematicsoup.com/news/2016/8/9/rrypp5tkubynjwxhxjzd42s3o034o8
 ///Stores the timestamps of the two most recent fixed steps, 
-///and by comparing them against the time during Update generates a global interpolation factor. 
+///and by comparing them against the time during Update generates a global interpolation factor.
+///
 ///The script must be attached to a single gameobject in the scene.
 
 using UnityEngine;

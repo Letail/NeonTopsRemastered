@@ -5,7 +5,8 @@
 ///before the current fixed step executes, instead of where it was interpolated to last. 
 ///This means that any scripts moving the transform are working from the correct state. 
 ///If you teleport an object and want to prevent interpolation, 
-///call the ForgetPreviousTransforms method after moving the object. 
+///call the ForgetPreviousTransforms method after moving the object.
+///
 ///This script should be attached to any objects moved during a FixedUpdate.
 
 using UnityEngine;

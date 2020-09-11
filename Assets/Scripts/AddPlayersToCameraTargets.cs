@@ -14,13 +14,14 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        targets.Add(playerInput.gameObject);
+        targets.Add(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().Spawn());
+
         cameraMultiTarget.SetTargets(targets.ToArray());
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        targets.Remove(playerInput.gameObject);
+        targets.Remove(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab());
         cameraMultiTarget.SetTargets(targets.ToArray());
     }
 

@@ -61,14 +61,18 @@ public class SetPlayerColor : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Player Joined");
-        playerInput.gameObject.GetComponent<Renderer>().material = skins[GetUnusedSkin()];
+        //playerInput.gameObject.GetComponent<Renderer>().material = skins[GetUnusedSkin()];
+        playerInput.gameObject.
+            GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
+            GetComponent<Renderer>().material = skins[GetUnusedSkin()];
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        Debug.Log("Player Left"); 
-        RemoveColorFromUsedList(playerInput.gameObject.GetComponent<Renderer>().material);
+        //RemoveColorFromUsedList(playerInput.gameObject.GetComponentInChildren<Renderer>().material);
+        RemoveColorFromUsedList(playerInput.gameObject.
+            GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
+            GetComponent<Renderer>().material);
     }
 
     private void OnEnable()
