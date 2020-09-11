@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-    void FixedUpdate()
+    void Update()
     {
         Vector3 movementVector = new Vector3(movementInput.x, 0, movementInput.y);
 
@@ -50,11 +50,11 @@ public class PlayerMovement : MonoBehaviour
         float speedDifference = rb.velocity.magnitude - maxSpeed;
         if (speedDifference > 0)
         {
-            rb.AddForce(movementVector * -speedDifference, ForceMode.Force);
+            rb.AddForce(movementVector * Time.deltaTime * -speedDifference, ForceMode.Force);
         }
         else
         {
-            rb.AddForce(movementVector * speed, ForceMode.Force);
+            rb.AddForce(movementVector * Time.deltaTime * speed, ForceMode.Force);
         }
     }
 
