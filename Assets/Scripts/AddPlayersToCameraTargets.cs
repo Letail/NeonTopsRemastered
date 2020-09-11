@@ -37,7 +37,6 @@ public class AddPlayersToCameraTargets : MonoBehaviour
         {
             PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
             PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
-
         }
     }
 }
