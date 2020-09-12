@@ -38,12 +38,12 @@ public class PlayerGotKnockedOutTextAnnouncement : MonoBehaviour
 
     private void OnEnable()
     {
-        OutOfArenaTrigger.OnPlayerOutOfArenaEvent += PlayerLeftArena;
+        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent += PlayerLeftArena;
 
     }
     private void OnDisable()
     {
-        OutOfArenaTrigger.OnPlayerOutOfArenaEvent -= PlayerLeftArena;
+        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= PlayerLeftArena;
 
     }
 }

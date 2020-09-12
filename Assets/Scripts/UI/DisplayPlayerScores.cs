@@ -24,7 +24,7 @@ public class DisplayPlayerScores : MonoBehaviour
     private void Start()
     {
         //TODO: these should be on OnEnable
-        OutOfArenaTrigger.OnPlayerOutOfArenaEvent += UpdatePlayerScore;
+        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent += UpdatePlayerScore;
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
 
@@ -92,7 +92,7 @@ public class DisplayPlayerScores : MonoBehaviour
     }
     private void OnDisable()
     {
-        OutOfArenaTrigger.OnPlayerOutOfArenaEvent -= UpdatePlayerScore;
+        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= UpdatePlayerScore;
         if (PlayerInputManager.instance != null)
         {
             PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
