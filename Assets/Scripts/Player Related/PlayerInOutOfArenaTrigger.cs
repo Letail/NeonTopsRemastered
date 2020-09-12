@@ -2,12 +2,20 @@
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(BoxCollider))]
-public class PlayerOutOfArenaTrigger : MonoBehaviour
+public class PlayerInOutOfArenaTrigger : MonoBehaviour
 {
     //This should go on the arena parent GameObject
 
     public delegate void OnPlayerOutOfArena(Transform trans);
     public static event OnPlayerOutOfArena OnPlayerOutOfArenaEvent;
+    public delegate void OnPlayerInArena(Transform trans);
+    public static event OnPlayerInArena OnPlayerInArenaEvent;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerInput>() != null) OnPlayerInArenaEvent?.Invoke(other.transform);
+
+    }
 
     private void OnTriggerExit(Collider other)
     {

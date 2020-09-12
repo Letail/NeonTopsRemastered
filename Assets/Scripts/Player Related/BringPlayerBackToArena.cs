@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 
 public class BringPlayerBackToArena : MonoBehaviour
@@ -17,7 +15,7 @@ public class BringPlayerBackToArena : MonoBehaviour
 
     }
 
-    IEnumerator BringBackAfterDelay(Transform trans ,float timeDelay)
+    IEnumerator BringBackAfterDelay(Transform trans, float timeDelay)
     {
         Rigidbody rb = trans.gameObject.GetComponent<Rigidbody>();
 
@@ -31,6 +29,8 @@ public class BringPlayerBackToArena : MonoBehaviour
         rb.isKinematic = true;
 
         yield return new WaitForSeconds(timeDelay);
+        //OnPlayerBackOnArenaEvent?.Invoke(trans);
+
 
         rb.isKinematic = false;
 
@@ -44,17 +44,15 @@ public class BringPlayerBackToArena : MonoBehaviour
         //without having interpolation
 
         trans.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().GetComponent<InterpolatedTransform>().ForgetPreviousTransforms();
-
-
     }
 
 
     private void OnEnable()
     {
-        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent += BringBack;
+        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += BringBack;
     }
     private void OnDisable()
     {
-        PlayerOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= BringBack;        
+        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= BringBack;
     }
 }

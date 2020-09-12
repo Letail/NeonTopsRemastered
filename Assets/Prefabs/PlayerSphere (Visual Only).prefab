@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 1319444360971742923}
   - component: {fileID: 1319444360971742927}
   - component: {fileID: 1319444360971742926}
+  - component: {fileID: -1857648572897319121}
   m_Layer: 0
-  m_Name: PlayerSphere (Visual Only) 1
+  m_Name: PlayerSphere (Visual Only)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,5 +228,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d9e2f430a95a1840860bec963125287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1857648572897319121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319444360971742924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30af18090dd50744aad188dec54b4174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
