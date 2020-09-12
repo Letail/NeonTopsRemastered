@@ -31,7 +31,6 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Should be adding properties to players");
         if (isPlayerActive1 == false)
         {
             Debug.Log("Player Properties 1 added!");
