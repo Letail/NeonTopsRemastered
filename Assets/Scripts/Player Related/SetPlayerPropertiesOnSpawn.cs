@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInputManager))]
 public class SetPlayerPropertiesOnSpawn : MonoBehaviour
 {
-    public PlayerProperties playerProperties1;
-    public PlayerProperties playerProperties2;
-    public PlayerProperties playerProperties3;
-    public PlayerProperties playerProperties4;
+    [SerializeField]
+    private PlayerProperties playerProperties1;
+    [SerializeField]
+    private PlayerProperties playerProperties2;
+    [SerializeField]
+    private PlayerProperties playerProperties3;
+    [SerializeField]
+    private PlayerProperties playerProperties4;
 
     private bool isPlayerActive1;
     private bool isPlayerActive2;

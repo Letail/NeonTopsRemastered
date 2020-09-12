@@ -9612,6 +9612,10 @@ MonoBehaviour:
   displayP2: {fileID: 805451733}
   displayP3: {fileID: 767536148}
   displayP4: {fileID: 1196156773}
+  textP1: {fileID: 248859597}
+  textP2: {fileID: 1837055828}
+  textP3: {fileID: 1770082623}
+  textP4: {fileID: 1206508346}
 --- !u!1 &1051531285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10616,6 +10620,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4190222254110200331, guid: cab85bc0d514dd140850eb9487884909, type: 3}
   m_PrefabInstance: {fileID: 1185881484}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189848226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189848228}
+  - component: {fileID: 1189848227}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189848227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189848226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf4d0d3c626ee64dba606b5770bd652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProperties1: {fileID: 11400000, guid: 5f20c9fd6bb2e194684afce97efa4e9d, type: 2}
+  playerProperties2: {fileID: 11400000, guid: d8d4cd25b3d03c24ab8cf371002fdbba, type: 2}
+  playerProperties3: {fileID: 11400000, guid: 536ccfa0a5020b14b9af84919eddfb83, type: 2}
+  playerProperties4: {fileID: 11400000, guid: abfb26ab989a6b146837b18072dde2a0, type: 2}
+--- !u!4 &1189848228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189848226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1193199264
 Mesh:
   m_ObjectHideFlags: 0

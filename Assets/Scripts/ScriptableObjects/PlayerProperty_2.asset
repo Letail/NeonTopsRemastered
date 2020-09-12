@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96b6b34b217f9044a1bec8ff4c6c725, type: 3}
   m_Name: PlayerProperty_2
   m_EditorClassIdentifier: 
-  playerID: 2
+  playerID: 1
   playerDeaths: 0

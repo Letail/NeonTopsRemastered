@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class DisplayPlayerScores : MonoBehaviour
 {
@@ -12,76 +14,63 @@ public class DisplayPlayerScores : MonoBehaviour
     private GameObject displayP3;
     [SerializeField]
     private GameObject displayP4;
+    private List<GameObject> displaysList;
+
+
+    [Header("Displays Text")]
+    [SerializeField]
+    private TMP_Text textP1;
+    [SerializeField]
+    private TMP_Text textP2;
+    [SerializeField]
+    private TMP_Text textP3;
+    [SerializeField]
+    private TMP_Text textP4;
+    private List<TMP_Text> textsList;
+
+    private readonly string scoreText = "Player {0} Deaths: {1}";
 
     private void Awake()
     {
-        displayP1.SetActive(false);
-        displayP2.SetActive(false);
-        displayP3.SetActive(false);
-        displayP4.SetActive(false);
+        displaysList = new List<GameObject> { displayP1, displayP2, displayP3, displayP4 };
+        textsList = new List<TMP_Text> { textP1, textP2, textP3, textP4 };
+
+        foreach (var item in displaysList)
+        {
+            item.SetActive(false);
+        }
     }
 
     private void Start()
     {
         //TODO: these should be on OnEnable
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += UpdatePlayerScore;
+        ScoreManager.OnPlayerScoreUpdatedEvent += UpdatePlayerScore;
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
 
+        UpdatePlayerScore(0, 0);
+        UpdatePlayerScore(1, 0);
+        UpdatePlayerScore(2, 0);
+        UpdatePlayerScore(3, 0);
+
     }
 
-    void UpdatePlayerScore(Transform trans)
+    void UpdatePlayerScore(int playerID, int score)
     {
-
+        textsList[playerID].text = string.Format(scoreText, playerID, score);
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         int playerID = playerInput.GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
-        if (playerID == 1)
-        {
-            displayP1.SetActive(true);
 
-        }
-        else if (playerID == 2)
-        {
-            displayP2.SetActive(true);
-
-        }
-        else if (playerID == 3)
-        {
-            displayP3.SetActive(true);
-
-        }
-        else if (playerID == 4)
-        {
-            displayP3.SetActive(true);
-
-        }
+        displaysList[playerID].SetActive(true);
     }
+
     public void OnPlayerLeft(PlayerInput playerInput)
     {
         int playerID = playerInput.GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
-        if (playerID == 1)
-        {
-            displayP1.SetActive(false);
-
-        }
-        else if (playerID == 2)
-        {
-            displayP2.SetActive(false);
-
-        }
-        else if (playerID == 3)
-        {
-            displayP3.SetActive(false);
-
-        }
-        else if (playerID == 4)
-        {
-            displayP3.SetActive(false);
-
-        }
+        displaysList[playerID].SetActive(false);
     }
 
 
@@ -92,7 +81,7 @@ public class DisplayPlayerScores : MonoBehaviour
     }
     private void OnDisable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= UpdatePlayerScore;
+        ScoreManager.OnPlayerScoreUpdatedEvent -= UpdatePlayerScore;
         if (PlayerInputManager.instance != null)
         {
             PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
