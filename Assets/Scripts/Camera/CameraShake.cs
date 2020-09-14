@@ -65,4 +65,19 @@ public class CameraShake : MonoBehaviour
             transform.localRotation = Quaternion.Euler(newPos * traumaRotMag);
         }
     }
+
+    public void AddTrauma(float traumaToAdd)
+    {
+        Trauma += traumaToAdd;
+        Debug.Log("Addin " + traumaToAdd + " trauma");
+    }
+
+    private void Awake()
+    {
+        OnPlayerCollAddCamShake.OnPlayerCollEvent += AddTrauma;
+    }
+    private void OnDisable()
+    {
+        OnPlayerCollAddCamShake.OnPlayerCollEvent -= AddTrauma;
+    }
 }

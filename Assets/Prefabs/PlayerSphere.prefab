@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 8793480354529107523}
   - component: {fileID: -1852511000163121884}
   - component: {fileID: 6308565187812886484}
+  - component: {fileID: -1888391924792648940}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Player
@@ -300,3 +301,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 1
   arenaBringBackPosition: {x: 0, y: 3, z: 0}
+--- !u!114 &-1888391924792648940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932306491335566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350f8a72d8e634846b957d9ca4eac628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  traumaAmout: 0.1

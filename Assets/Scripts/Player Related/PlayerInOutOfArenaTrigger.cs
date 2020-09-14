@@ -14,7 +14,6 @@ public class PlayerInOutOfArenaTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerInput>() != null) OnPlayerInArenaEvent?.Invoke(other.transform);
-
     }
 
     private void OnTriggerExit(Collider other)
