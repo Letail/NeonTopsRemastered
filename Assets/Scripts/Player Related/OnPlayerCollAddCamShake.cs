@@ -12,7 +12,10 @@ public class OnPlayerCollAddCamShake : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Player Collision");
-        OnPlayerCollEvent?.Invoke(traumaAmout);
+        if (collision.gameObject.layer != 9)
+        {
+            Debug.Log("Player Collision");
+            OnPlayerCollEvent?.Invoke(traumaAmout);
+        }
     }
 }

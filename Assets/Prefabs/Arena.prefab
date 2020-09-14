@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 286777590680977016}
   - component: {fileID: 286777590680977015}
   - component: {fileID: 286777590680977014}
+  - component: {fileID: 7114774081060334650}
   m_Layer: 9
-  m_Name: "45\xBA Barrier_2"
+  m_Name: "45\xBA Ramp_2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 850a4bf6f9193364088056e368f529bc, type: 2}
+  - {fileID: 2100000, guid: 71cc697724168a94298ce70160842ece, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -276,6 +277,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7114774081060334650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286777590680977012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4becef832f15f7843afeba844848f0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 4
 --- !u!1 &286777590739069222
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +305,7 @@ GameObject:
   - component: {fileID: 286777590739069226}
   - component: {fileID: 286777590739069225}
   - component: {fileID: 286777590739069224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RampRail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286777591028553159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BumperTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +559,7 @@ GameObject:
   - component: {fileID: 286777591033521123}
   - component: {fileID: 286777591033521122}
   - component: {fileID: 286777591033521121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RampRail_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,8 +777,9 @@ GameObject:
   - component: {fileID: 286777591101000406}
   - component: {fileID: 286777591101000405}
   - component: {fileID: 286777591101000404}
+  - component: {fileID: 4779657112737952403}
   m_Layer: 9
-  m_Name: "45\xBA Barrier_1"
+  m_Name: "45\xBA Ramp_1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -982,7 +997,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 850a4bf6f9193364088056e368f529bc, type: 2}
+  - {fileID: 2100000, guid: 71cc697724168a94298ce70160842ece, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1026,6 +1041,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4779657112737952403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286777591101000402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4becef832f15f7843afeba844848f0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 4
 --- !u!1 &286777591557850060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,8 +1141,9 @@ GameObject:
   - component: {fileID: 286777591634390617}
   - component: {fileID: 286777591634390616}
   - component: {fileID: 286777591634390615}
+  - component: {fileID: 6518953176544585239}
   m_Layer: 9
-  m_Name: "45\xBA Barrier_3"
+  m_Name: "45\xBA Ramp_3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1332,7 +1361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 850a4bf6f9193364088056e368f529bc, type: 2}
+  - {fileID: 2100000, guid: 71cc697724168a94298ce70160842ece, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1376,6 +1405,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6518953176544585239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286777591634390613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4becef832f15f7843afeba844848f0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 4
 --- !u!1 &286777591643665403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286777591643665404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BumperTower_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1467,7 @@ GameObject:
   - component: {fileID: 286777591958319386}
   - component: {fileID: 286777591958319385}
   - component: {fileID: 286777591958319384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ramp Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1643,8 +1685,9 @@ GameObject:
   - component: {fileID: 286777592002942528}
   - component: {fileID: 286777592002942591}
   - component: {fileID: 286777592002942590}
+  - component: {fileID: 2866734253257807913}
   m_Layer: 9
-  m_Name: "45\xBA Barrier"
+  m_Name: "45\xBA Ramp"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1862,7 +1905,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 850a4bf6f9193364088056e368f529bc, type: 2}
+  - {fileID: 2100000, guid: 71cc697724168a94298ce70160842ece, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1906,6 +1949,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2866734253257807913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286777592002942588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4becef832f15f7843afeba844848f0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 4
 --- !u!1 &286777592018143721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286777592018143722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BumperTower_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2262,7 +2318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286777592331867877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BumperTower_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,7 +2358,7 @@ GameObject:
   - component: {fileID: 286777592348672494}
   - component: {fileID: 286777592348672493}
   - component: {fileID: 286777592348672492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RampRail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
