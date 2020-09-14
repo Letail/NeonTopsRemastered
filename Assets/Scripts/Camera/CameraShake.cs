@@ -1,4 +1,6 @@
 ﻿/// https://www.armandoesstuff.com/devlogs/perlin-camera-shake-tutorial
+/// You're supposed to add this script to an empty game object,
+/// and then make your Camera a child of it.
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
