@@ -57,7 +57,8 @@ public class DisplayPlayerScores : MonoBehaviour
 
     void UpdatePlayerScore(int playerID, int score)
     {
-        textsList[playerID].text = string.Format(scoreText, playerID, score);
+        //doing playerID + 1 because they are 0-indexed, and we want to start with Player 1, not 0
+        textsList[playerID].text = string.Format(scoreText, playerID + 1, score);
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
