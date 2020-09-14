@@ -26,6 +26,15 @@ public class ScoreManager : MonoBehaviour
     {
         playersTransList = new List<Transform> { playerTrans1, playerTrans2, playerTrans3, playerTrans4 };
         playersPropertiesList = new List<PlayerProperties> { playerProperties1, playerProperties2, playerProperties3, playerProperties4 };
+        ResetPlayersScores();
+    }
+
+    void ResetPlayersScores()
+    {
+        for (int i = 0; i < playersPropertiesList.Count; i++)
+        {
+            playersPropertiesList[i].playerDeaths = 0;
+        }
     }
 
     void AddToPlayersDeathCounter(Transform trans)
