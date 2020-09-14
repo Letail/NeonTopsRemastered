@@ -7,7 +7,8 @@ public class OnPlayerCollFreezeFrame : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnPlayerCollEvent?.Invoke();
+        //Layer 9 is ground
+        if(collision.gameObject.layer != 9) OnPlayerCollEvent?.Invoke();
     }
 
 }
