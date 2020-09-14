@@ -10,7 +10,6 @@
 ///This script should be attached to any objects moved during a FixedUpdate.
 
 using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(InterpolatedTransformUpdater))]
 public class InterpolatedTransform : MonoBehaviour
