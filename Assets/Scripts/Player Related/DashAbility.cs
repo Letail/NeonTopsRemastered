@@ -28,11 +28,13 @@ public class DashAbility : MonoBehaviour
     {
         Debug.Log("Dashed");
         velocityVector = rb.velocity.normalized;
+        rb.velocity = Vector3.zero;
         rb.AddForce(velocityVector * dashStrength);
     }
 
-    public void OnDash()
+    public void OnDash(Input value)
     {
+        Debug.Log("dash type is" + value);
         Dash();
     }
 }
