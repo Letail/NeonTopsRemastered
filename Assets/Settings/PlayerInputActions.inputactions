@@ -1,5 +1,5 @@
 {
-    "name": "Neon Tops Remastered",
+    "name": "PlayerInputActions",
     "maps": [
         {
             "name": "Player",
@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "ae3a6e68-bae0-4a8a-a000-7f61b6cd9dbc",
                     "expectedControlType": "Button",
@@ -203,7 +203,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -214,7 +214,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -225,7 +225,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -236,7 +236,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -247,7 +247,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
