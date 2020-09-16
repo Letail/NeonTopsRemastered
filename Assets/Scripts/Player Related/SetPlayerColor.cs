@@ -70,9 +70,13 @@ public class SetPlayerColor : MonoBehaviour
     public void OnPlayerLeft(PlayerInput playerInput)
     {
         //RemoveColorFromUsedList(playerInput.gameObject.GetComponentInChildren<Renderer>().material);
-        RemoveColorFromUsedList(playerInput.gameObject.
-            GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
-            GetComponent<Renderer>().material);
+        if (PlayerInputManager.instance != null)
+        {
+            RemoveColorFromUsedList(playerInput.gameObject.
+                GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
+                    GetComponent<Renderer>().material);
+        }
+        
     }
 
     private void OnEnable()

@@ -6,6 +6,7 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 {
     public CameraMultiTarget cameraMultiTarget;
     List<GameObject> targets;
+    private GameObject visualsPrefab;
 
     void Awake()
     {
@@ -14,14 +15,16 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        targets.Add(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().Spawn());
+        visualsPrefab = playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().Spawn();
+        targets.Add(visualsPrefab);
 
         cameraMultiTarget.SetTargets(targets.ToArray());
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        targets.Remove(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab());
+        visualsPrefab = playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab();
+        targets.Remove(visualsPrefab);
         cameraMultiTarget.SetTargets(targets.ToArray());
     }
 

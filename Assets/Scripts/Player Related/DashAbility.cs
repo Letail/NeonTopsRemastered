@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -10,31 +8,36 @@ public class DashAbility : MonoBehaviour
     private float dashStrength;
 
     private Rigidbody rb;
-    private Vector3 velocityVector;
+    private Vector3 dashVector;
+    private Vector2 lookInput;
+    private Transform dirSphere;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        dashVector = new Vector3(lookInput.normalized.x, 0, lookInput.normalized.y);
     }
 
     void Dash()
     {
-        Debug.Log("Dashed");
-        velocityVector = rb.velocity.normalized;
+        dashVector = new Vector3(lookInput.normalized.x, 0, lookInput.normalized.y);
         rb.velocity = Vector3.zero;
-        rb.AddForce(velocityVector * dashStrength);
+        rb.AddForce(dashVector * dashStrength);
     }
 
-    public void OnDash(Input value)
+    public void OnDash()
     {
-        Debug.Log("dash type is" + value);
+        //This has to be called from a button! 
+        //It cannot be analogue like the XBox's Bumpers
         Dash();
+    }
+
+    public void OnLook(InputValue value)
+    {
+        lookInput = value.Get<Vector2>();
     }
 }
