@@ -71,7 +71,6 @@ public class CameraShake : MonoBehaviour
     public void AddTrauma(float traumaToAdd)
     {
         Trauma += traumaToAdd;
-        Debug.Log("Addin " + traumaToAdd + " trauma");
     }
 
     private void Awake()
