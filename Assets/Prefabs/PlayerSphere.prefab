@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 3049437510660258616}
   - component: {fileID: 8793480354529107523}
   - component: {fileID: -1852511000163121884}
+  - component: {fileID: 7637197743002806158}
   - component: {fileID: 6308565187812886484}
   - component: {fileID: -1888391924792648940}
   - component: {fileID: 7631032663783475947}
@@ -289,6 +290,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersVisualsPrefab: {fileID: 1319444360971742924, guid: 2e38b58bdf8498f4ab270c356b90fd04, type: 3}
+--- !u!114 &7637197743002806158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932306491335566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e396dd40dd01b03418593773f157ceab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionSpherePrefab: {fileID: 2294835342159904235, guid: 1720799ab5b79f847953a12b71b60d97, type: 3}
 --- !u!114 &6308565187812886484
 MonoBehaviour:
   m_ObjectHideFlags: 0
