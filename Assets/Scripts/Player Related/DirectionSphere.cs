@@ -9,20 +9,13 @@ public class DirectionSphere : MonoBehaviour
 {
     public GameObject playerToFollow;
     [HideInInspector]
-    public Vector2 directionVector;  //set from SpawnDirSphereOnStart
+    public Vector2 directionVector;
     [SerializeField]
     private float distanceFromPlayer;
 
     private void FixedUpdate()
     {
-        if(directionVector.magnitude > 0.1)
-        {
-            transform.position = playerToFollow.transform.position
-            + (new Vector3(directionVector.x, 0, directionVector.y).normalized * distanceFromPlayer);
-        }
-        else
-        {
-            transform.position = playerToFollow.transform.position;
-        }        
+        transform.position = playerToFollow.transform.position
+            + (new Vector3(directionVector.x, 0, directionVector.y) * distanceFromPlayer);
     }
 }
