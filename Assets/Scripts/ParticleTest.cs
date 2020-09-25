@@ -1,29 +1,32 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;  
+using UnityEngine;
 
 public class ParticleTest : MonoBehaviour
 {
     public GameObject particlePrefab;
-    public GameObject particle;
     public float particleLifeTime;
+    private GameObject particleObject;
+    private ParticleSystem particle;
 
     private void Start()
     {
-        particle = Instantiate(particlePrefab, transform, false);
-        particle.SetActive(false);
+        particleObject = Instantiate(particlePrefab, Vector3.zero, Quaternion.identity);
+        particle = particleObject.GetComponent<ParticleSystem>();
+        particle.Stop(true);
     }
 
-    IEnumerator PlayParticle(Vector3 pos, float time)
+    IEnumerator PlayParticle(Vector3 pos, Vector3 normal, float time)
     {
         particle.transform.position = pos;
-        particle.SetActive(true);
+        particle.transform.rotation = Quaternion.LookRotation(normal);
+        particle.Play(true);
         yield return new WaitForSeconds(time);
-        particle.SetActive(false);
+        particle.Stop(true);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        StartCoroutine(PlayParticle(collision.contacts[0].point, particleLifeTime));
+        if(collision.gameObject.layer != 9) // 9 = Ground
+        StartCoroutine(PlayParticle(collision.contacts[0].point, collision.contacts[0].normal, particleLifeTime));
     }
 }

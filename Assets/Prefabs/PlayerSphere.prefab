@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: -1888391924792648940}
   - component: {fileID: 7631032663783475947}
   - component: {fileID: 5502251746431648082}
+  - component: {fileID: -8706819926655066528}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Player
@@ -355,3 +356,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashStrength: 500
+--- !u!114 &-8706819926655066528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932306491335566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f9ec5813fcaa0498added6a359068e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e, type: 3}
+  particleLifeTime: 0.1
