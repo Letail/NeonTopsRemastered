@@ -9,7 +9,7 @@ public class SpawnPlayersVisualsPrefab : MonoBehaviour
     public GameObject Spawn()
     {
         prefabInstance = Instantiate(playersVisualsPrefab);
-        prefabInstance.GetComponent<InterpolatedVisualObject>().objectToFollow = this.gameObject;
+        prefabInstance.GetComponent<PlayerVisualObject>().objectToFollow = this.gameObject;
 
         return prefabInstance;
     }

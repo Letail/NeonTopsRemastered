@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 0}
+  tiltStrength: 5
 --- !u!114 &7415932647011265112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.023809
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,14 +6,25 @@
 /// to make it extra smooth.
 /// </summary>
 [RequireComponent(typeof(InterpolatedTransform))]
-public class InterpolatedVisualObject : MonoBehaviour
+public class PlayerVisualObject : MonoBehaviour
 {
     [HideInInspector]
     public GameObject objectToFollow; //Needs to be public so that SpawnPlayersVisualsPrefab.cs can access it
+    private Rigidbody rb;
+    private Vector3 vel;
+    [SerializeField]
+    private float tiltStrength;
+
+    private void Start()
+    {
+        rb = objectToFollow.GetComponent<Rigidbody>();
+    }
 
     void FixedUpdate()
     {
         transform.position = objectToFollow.transform.position;
-        //transform.rotation = objectToFollow.transform.rotation;
+        vel.x = rb.velocity.z * tiltStrength;
+        vel.z = - rb.velocity.x * tiltStrength;
+        transform.rotation = Quaternion.Euler(vel);
     }
 }
