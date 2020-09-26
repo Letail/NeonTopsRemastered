@@ -62,9 +62,12 @@ public class SetPlayerColor : MonoBehaviour
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         //playerInput.gameObject.GetComponent<Renderer>().material = skins[GetUnusedSkin()];
-        playerInput.gameObject.
-            GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
-            GetComponent<Renderer>().material = skins[GetUnusedSkin()];
+        //playerInput.gameObject.
+        //    GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
+        //    GetComponent<Renderer>().material = skins[GetUnusedSkin()];
+
+        playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab()
+            .GetComponent<PlayerSkin>().SkinMaterial = skins[GetUnusedSkin()];
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
@@ -72,9 +75,11 @@ public class SetPlayerColor : MonoBehaviour
         //RemoveColorFromUsedList(playerInput.gameObject.GetComponentInChildren<Renderer>().material);
         if (PlayerInputManager.instance != null)
         {
-            RemoveColorFromUsedList(playerInput.gameObject.
-                GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
-                    GetComponent<Renderer>().material);
+            //RemoveColorFromUsedList(playerInput.gameObject.
+            //    GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
+            //        GetComponent<Renderer>().material);
+            RemoveColorFromUsedList(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab()
+            .GetComponent<PlayerSkin>().SkinMaterial);
         }
         
     }

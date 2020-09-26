@@ -14,6 +14,6 @@ public class InterpolatedVisualObject : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = objectToFollow.transform.position;
-        transform.rotation = objectToFollow.transform.rotation;
+        //transform.rotation = objectToFollow.transform.rotation;
     }
 }
