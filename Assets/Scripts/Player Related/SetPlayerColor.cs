@@ -80,8 +80,7 @@ public class SetPlayerColor : MonoBehaviour
             //        GetComponent<Renderer>().material);
             RemoveColorFromUsedList(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab()
             .GetComponent<PlayerSkin>().SkinMaterial);
-        }
-        
+        }        
     }
 
     private void OnEnable()

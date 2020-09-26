@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 0}
+  tiltStrength: 0
 --- !u!114 &1319444360971742926
 MonoBehaviour:
   m_ObjectHideFlags: 0

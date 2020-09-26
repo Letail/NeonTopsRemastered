@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8477362596068126444}
   - component: {fileID: 3288268434848659903}
   - component: {fileID: 7415932647011265112}
+  - component: {fileID: 6921536297759275299}
   m_Layer: 0
   m_Name: SpinningTopHolder
   m_TagString: Untagged
@@ -208,6 +209,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modelRenderer: {fileID: 714150201425355254}
   trail: {fileID: 2477095794342697562}
+--- !u!114 &6921536297759275299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608672052538027114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb132a5c88bc53499cec877f45d9d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1212753404756504300
 PrefabInstance:
   m_ObjectHideFlags: 0
