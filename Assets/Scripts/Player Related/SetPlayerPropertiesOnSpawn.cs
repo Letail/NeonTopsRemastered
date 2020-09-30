@@ -37,26 +37,26 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
     {
         if (isPlayerActive1 == false)
         {
-            Debug.Log("Player Properties 1 added!");
+            //Debug.Log("Player Properties 1 added!");
 
             playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties1;
             isPlayerActive1 = true;
         }
         else if (isPlayerActive2 == false)
         {
-            Debug.Log("Player Properties 2 added!");
+            //Debug.Log("Player Properties 2 added!");
             playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties2;
             isPlayerActive2 = true;
         }
         else if (isPlayerActive3 == false)
         {
-            Debug.Log("Player Properties 3 added!");
+            //Debug.Log("Player Properties 3 added!");
             playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties3;
             isPlayerActive3 = true;
         }
         else if (isPlayerActive4 == false)
         {
-            Debug.Log("Player Properties 4 added!");
+            //Debug.Log("Player Properties 4 added!");
             playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties4;
             isPlayerActive4 = true;
         }

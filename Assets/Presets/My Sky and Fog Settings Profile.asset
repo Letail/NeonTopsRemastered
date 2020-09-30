@@ -79,7 +79,7 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 236
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
   m_Name: HDRISky
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   rotation:
     m_OverrideState: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
     max: 360
   skyIntensityMode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   exposure:
     m_OverrideState: 0
     m_Value: 14.38
@@ -144,7 +144,7 @@ MonoBehaviour:
     m_Value: {x: 0.18750611, y: 0.29181966, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 1
-    m_Value: 20000
+    m_Value: 14.6
   updateMode:
     m_OverrideState: 0
     m_Value: 0
@@ -225,8 +225,8 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   skyAmbientMode:
-    m_OverrideState: 1
-    m_Value: 0
+    m_OverrideState: 0
+    m_Value: 1
   fogType:
     m_OverrideState: 1
     m_Value: 3
