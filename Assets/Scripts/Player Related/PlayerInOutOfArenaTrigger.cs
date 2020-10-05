@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Collider))]
 public class PlayerInOutOfArenaTrigger : MonoBehaviour
 {
     //This should go on the arena parent GameObject

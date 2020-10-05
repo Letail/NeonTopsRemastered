@@ -11,6 +11,16 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
 
     public float maxSpeed;
+    public float oppositeDirMultiplier;
+
+    [Header("Move with Curve")]
+    public AnimationCurve movementCurve;
+    public bool moveWithCurve;
+    public float moveWithCurveSpeed;
+    private float forceBasedOnCurve;
+    private float percentageOfMaxSpeed;
+    private float angleVelAndInput;
+
 
     [Header("Move with Force")]
     public bool useForce;
@@ -30,6 +40,26 @@ public class PlayerMovement : MonoBehaviour
 
         if (useForce) MoveWithForce(movementVector);
         if (useAcceleration) MoveWithAcceleration(movementVector);
+        if (moveWithCurve) MoveWithCurve(movementVector);
+    }
+
+    private void MoveWithCurve(Vector3 movementVector)
+    {
+        //float speedDifference = rb.velocity.magnitude - maxSpeed;
+        //if (speedDifference > 0)
+        //{
+        //    rb.AddForce(movementVector * Time.deltaTime * -speedDifference, ForceMode.Force);
+        //}
+        //else
+        //{
+        //    percentageOfMaxSpeed = Mathf.Clamp01(rb.velocity.magnitude / maxSpeed);
+        //    forceBasedOnCurve = Mathf.Lerp(0, moveWithCurveSpeed, movementCurve.Evaluate(percentageOfMaxSpeed));
+        //    rb.AddForce(movementVector * Time.deltaTime * forceBasedOnCurve, ForceMode.Force);
+        //}
+
+        percentageOfMaxSpeed = Mathf.Clamp01(rb.velocity.magnitude / maxSpeed);
+        forceBasedOnCurve = Mathf.Lerp(0, moveWithCurveSpeed, movementCurve.Evaluate(percentageOfMaxSpeed));
+        rb.AddForce(movementVector * Time.deltaTime * forceBasedOnCurve, ForceMode.Force);
     }
 
     private void MoveWithAcceleration(Vector3 movementVector)
@@ -47,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveWithForce(Vector3 movementVector)
     {
+        //angleVelAndInput = Mathf.Lerp(oppositeDirMultiplier, 1, Vector3.Angle(movementVector, rb.velocity) / 180f);
+
+        //print("Angle Velocity And Input = " + angleVelAndInput);
+
         float speedDifference = rb.velocity.magnitude - maxSpeed;
         if (speedDifference > 0)
         {
