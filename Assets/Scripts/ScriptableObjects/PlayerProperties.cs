@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerProperties", menuName = "ScriptableObjects/PlayerProperty")]
+[CreateAssetMenu(fileName = "Player Properties", menuName = "Scriptable Objects/Player Property")]
 public class PlayerProperties : ScriptableObject
 {
     public int playerID; //0-indexed

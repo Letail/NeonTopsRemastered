@@ -92,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnMove(InputValue value)
-    {
-        movementInput = value.Get<Vector2>();
-    }
+    public void OnMove(InputValue value) { movementInput = value.Get<Vector2>(); }
+
+    //To be called by the EnemyInputByBrain.cs
+    public void OnMove(Vector2 value) { movementInput = value; }
 }

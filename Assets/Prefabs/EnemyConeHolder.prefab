@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 2968947966038204619}
   - component: {fileID: 2968947966038204468}
   - component: {fileID: 2968947966038204469}
+  - component: {fileID: 8863326842501303530}
   m_Layer: 0
   m_Name: EnemyCone
   m_TagString: Untagged
@@ -617,3 +618,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2968947966038204471}
   m_Mesh: {fileID: 0}
+--- !u!114 &8863326842501303530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968947966038204471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864a3cd764f4c1a4b919ff19a05fbc0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1000
