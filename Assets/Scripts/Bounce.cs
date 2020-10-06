@@ -6,7 +6,9 @@ using UnityEngine;
 public class Bounce : MonoBehaviour
 {
     private Rigidbody rb;
+    [Tooltip("Adds Force on OnCollisionEnter")]
     public float bounceForce;
+    public float verticalBounceForce;
     public int groundLayer;
 
     private void Awake()
@@ -24,6 +26,7 @@ public class Bounce : MonoBehaviour
             {
                 rb.AddForceAtPosition(point.normal * bounceForce, point.point, ForceMode.Impulse);
             }
+            rb.AddForce(Vector3.up * verticalBounceForce, ForceMode.Force);
         }
         
     }
