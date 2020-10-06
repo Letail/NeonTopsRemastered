@@ -21,7 +21,7 @@ public class BringPlayerBackToArena : MonoBehaviour
 
 #if UNITY_EDITOR
         //If before setting the rb to kinematic its collision detection isn't set to "ContinuousSpeculative",
-        //then Unity will throw a warning and clog the console, so were just avoid this here.
+        //then Unity will throw a warning and clog the console, so we're just avoiding this here.
         CollisionDetectionMode previousMode = rb.collisionDetectionMode;
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
 #endif
