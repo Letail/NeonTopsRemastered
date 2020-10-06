@@ -43,7 +43,7 @@ public class BringPlayerBackToArena : MonoBehaviour
         //Calling ForgetPreviousTransforms() so we can "teleport" the player back
         //without having interpolation
 
-        trans.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().GetComponent<InterpolatedTransform>().ForgetPreviousTransforms();
+        trans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab().GetComponent<InterpolatedTransform>().ForgetPreviousTransforms();
     }
 
 

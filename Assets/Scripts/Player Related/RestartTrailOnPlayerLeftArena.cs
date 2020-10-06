@@ -14,7 +14,7 @@ public class RestartTrailOnPlayerLeftArena : MonoBehaviour
     IEnumerator TurnTrailEmitingONAfterASecond(Transform trans)
     {
         yield return new WaitForSeconds(0.5f);
-        trail = trans.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().GetComponent<TrailRenderer>();
+        trail = trans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab().GetComponent<TrailRenderer>();
         trail.Clear();
         trail.emitting = true;
     }
@@ -27,7 +27,7 @@ public class RestartTrailOnPlayerLeftArena : MonoBehaviour
     IEnumerator TurnTrailEmitingOFFAfterASecond(Transform trans)
     {
         yield return new WaitForSeconds(1f);
-        trail = trans.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().GetComponent<TrailRenderer>();
+        trail = trans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab().GetComponent<TrailRenderer>();
         trail.Clear();
         trail.emitting = false;
     }

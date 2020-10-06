@@ -6,7 +6,7 @@
 /// to make it extra smooth.
 /// </summary>
 [RequireComponent(typeof(InterpolatedTransform))]
-public class PlayerVisualObject : MonoBehaviour
+public class CharacterVisualObject : MonoBehaviour
 {
     [HideInInspector]
     public GameObject objectToFollow; //Needs to be public so that SpawnPlayersVisualsPrefab.cs can access it

@@ -19,7 +19,7 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
     {
         dirSphereObject = Instantiate(directionSpherePrefab, this.transform.position, Quaternion.identity);
         directionSphere = dirSphereObject.GetComponent<DirectionSphere>();
-        directionSphere.playerToFollow = GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab();
+        directionSphere.playerToFollow = GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
         directionSphereIsSet = true;
     }
 

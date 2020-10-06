@@ -66,7 +66,7 @@ public class SetPlayerColor : MonoBehaviour
         //    GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
         //    GetComponent<Renderer>().material = skins[GetUnusedSkin()];
 
-        playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab()
+        playerInput.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab()
             .GetComponent<PlayerSkin>().SkinMaterial = skins[GetUnusedSkin()];
     }
 
@@ -78,7 +78,7 @@ public class SetPlayerColor : MonoBehaviour
             //RemoveColorFromUsedList(playerInput.gameObject.
             //    GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab().
             //        GetComponent<Renderer>().material);
-            RemoveColorFromUsedList(playerInput.gameObject.GetComponent<SpawnPlayersVisualsPrefab>().GetPrefab()
+            RemoveColorFromUsedList(playerInput.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab()
             .GetComponent<PlayerSkin>().SkinMaterial);
         }        
     }
