@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1851
     height: 1037
   m_ShowMode: 4
-  m_Title: Screenshot
+  m_Title: Project
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 592}
+  m_MinSize: {x: 875, y: 642}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -41,13 +41,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 471
-    height: 403
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+    width: 433
+    height: 381
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 584
-    width: 1414
-    height: 403
-  m_MinSize: {x: 433, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+    y: 606
+    width: 1298
+    height: 381
+  m_MinSize: {x: 432, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 295
+  controlID: 97
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -96,10 +96,10 @@ MonoBehaviour:
     y: 30
     width: 1851
     height: 987
-  m_MinSize: {x: 1052, y: 542}
-  m_MaxSize: {x: 14254, y: 14042}
+  m_MinSize: {x: 877, y: 592}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 341
+  controlID: 276
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -110,24 +110,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ScreenshotUtility
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1414
+    x: 1298
     y: 0
-    width: 437
+    width: 553
     height: 987
-  m_MinSize: {x: 251, y: 296}
-  m_MaxSize: {x: 251, y: 296}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
+  - {fileID: 19}
   - {fileID: 17}
   - {fileID: 15}
-  - {fileID: 13}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,17 +143,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 471
+    x: 433
     y: 0
-    width: 943
-    height: 403
+    width: 865
+    height: 381
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 18}
   m_Panes:
+  - {fileID: 18}
+  - {fileID: 23}
   - {fileID: 16}
-  - {fileID: 21}
-  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &7
@@ -178,7 +178,7 @@ MonoBehaviour:
     y: 0
     width: 1851
     height: 1037
-  m_MinSize: {x: 875, y: 592}
+  m_MinSize: {x: 875, y: 642}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 22}
-  m_MainToolbar: {fileID: 22}
+  - {fileID: 24}
+  m_MainToolbar: {fileID: 24}
   m_LastLoadedLayoutName: Wide Custom
 --- !u!114 &9
 MonoBehaviour:
@@ -249,12 +249,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1414
+    width: 1298
     height: 987
-  m_MinSize: {x: 801, y: 542}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 601, y: 592}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 16
+  controlID: 96
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,25 +265,559 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PackageManagerWindow
+  m_Name: InputActionEditorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1414
-    height: 584
-  m_MinSize: {x: 801, y: 271}
+    width: 1298
+    height: 606
+  m_MinSize: {x: 601, y: 321}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 19}
-  - {fileID: 20}
+  - {fileID: 21}
+  - {fileID: 14}
+  - {fileID: 22}
+  - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 4
+  m_LastSelected: 2
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 600, y: 300}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: PlayerInputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 69
+    y: 73
+    width: 1297
+    height: 585
+  m_ViewDataDictionary: {fileID: 0}
+  m_ActionMapsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: da1a84c2
+    m_LastClickedID: -1031529766
+    m_ExpandedIDs: 00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ActionsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b1145097
+    m_LastClickedID: -1756359503
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ControlPickerViewState:
+    m_AdvancedDropdownState:
+      states: []
+    m_ManualPathEditMode: 0
+  m_ActionAssetManager:
+    m_AssetObjectForEditing: {fileID: 0}
+    m_ImportedAssetObject: {fileID: -944628639613478452, guid: c718d35f341c5af448529b2b286655ab, type: 3}
+    m_AssetGUID: c718d35f341c5af448529b2b286655ab
+    m_ImportedAssetJson: "{\n    \"name\": \"PlayerInputActions\",\n    \"maps\":
+      [\n        {\n            \"name\": \"Player\",\n            \"id\": \"28d45cde-1650-46bc-a350-fc8513ed1bb8\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"Move\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"b0845e89-d2d4-4ad1-b0ce-f59cb57e83e9\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\"\n                },\n               
+      {\n                    \"name\": \"Look\",\n                    \"type\": \"Value\",\n                   
+      \"id\": \"4c71e212-8885-48eb-8c6c-2de9473b2e6c\",\n                    \"expectedControlType\":
+      \"Vector2\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Dash\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"ae3a6e68-bae0-4a8a-a000-7f61b6cd9dbc\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
+      [\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"978bfe49-cc26-4a3d-ab7b-7d7a29327403\",\n                    \"path\":
+      \"<Gamepad>/leftStick\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"WASD\",\n                    \"id\": \"00ca640b-d935-4593-8157-c05846ea39b3\",\n                   
+      \"path\": \"Dpad\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"e2062cb9-1b15-46a2-838c-2f8d72a0bdd9\",\n                   
+      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"8180e8bd-4097-4f4e-ab88-4523101a6ce9\",\n                   
+      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"320bffee-a40b-4347-ac70-c210eb8bc73a\",\n                   
+      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"1c5327b5-f71c-4f60-99c7-4e737386f1d1\",\n                   
+      \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Keyboard&Mouse\",\n                    \"action\": \"Move\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"left\",\n                   
+      \"id\": \"d2581a9b-1d11-4566-b27d-b92aff5fabbc\",\n                    \"path\":
+      \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"left\",\n                    \"id\": \"2e46982e-44cc-431b-9f0b-c11910bf467a\",\n                   
+      \"path\": \"<Keyboard>/leftArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Keyboard&Mouse\",\n                    \"action\": \"Move\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"right\",\n                   
+      \"id\": \"fcfe95b8-67b9-4526-84b5-5d0bc98d6400\",\n                    \"path\":
+      \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"77bff152-3580-4b21-b6de-dcd0c7e41164\",\n                   
+      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Keyboard&Mouse\",\n                    \"action\": \"Move\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8\",\n                    \"path\":
+      \"<XRController>/{Primary2DAxis}\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"XR\",\n                    \"action\": \"Move\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                },\n               
+      {\n                    \"name\": \"\",\n                    \"id\": \"3ea4d645-4504-4529-b061-ab81934c3752\",\n                   
+      \"path\": \"<Joystick>/stick\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Joystick\",\n                   
+      \"action\": \"Move\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"c1f7a91b-d0fd-4a62-997e-7fb9b69bf235\",\n                   
+      \"path\": \"<Gamepad>/rightStick\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Gamepad\",\n                    \"action\": \"Look\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"8c8e490b-c610-4785-884f-f04217b23ca4\",\n                    \"path\":
+      \"<Pointer>/delta\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse;Touch\",\n                   
+      \"action\": \"Look\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"3e5f5442-8668-4b27-a940-df99bad7e831\",\n                   
+      \"path\": \"<Joystick>/{Hatswitch}\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Joystick\",\n                    \"action\": \"Look\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"143bb1cd-cc10-4eca-a2f0-a3664166fe91\",\n                    \"path\":
+      \"<Gamepad>/rightShoulder\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Dash\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"05f6913d-c316-48b2-a6bb-e225f14c7960\",\n                   
+      \"path\": \"<Mouse>/leftButton\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Dash\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"886e731e-7071-4ae4-95c0-e61739dad6fd\",\n                   
+      \"path\": \"<Touchscreen>/primaryTouch/tap\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Touch\",\n                    \"action\": \"Dash\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"ee3d0cd2-254e-47a7-a8cb-bc94d9658c54\",\n                    \"path\":
+      \"<Joystick>/trigger\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Joystick\",\n                   
+      \"action\": \"Dash\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"8255d333-5683-4943-a58a-ccb207ff1dce\",\n                   
+      \"path\": \"<XRController>/{PrimaryAction}\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"XR\",\n                    \"action\": \"Dash\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n           
+      ]\n        },\n        {\n            \"name\": \"UI\",\n            \"id\":
+      \"c409ce97-af99-4416-91d7-f24854c04823\",\n            \"actions\": [\n               
+      {\n                    \"name\": \"Navigate\",\n                    \"type\":
+      \"Value\",\n                    \"id\": \"f0daf747-263f-4556-9989-030411e0ea41\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\"\n                },\n               
+      {\n                    \"name\": \"Submit\",\n                    \"type\":
+      \"Button\",\n                    \"id\": \"ab183895-fc50-4b65-a26e-bf4ee40089f6\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Cancel\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"d7205308-db52-4346-825e-68354627a019\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Point\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"b9935196-87ad-459c-b43c-6f11bac9afd8\",\n                    \"expectedControlType\":
+      \"Vector2\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"Click\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"b75db751-7f53-47e0-909a-40dc360e4443\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"ScrollWheel\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"04241190-d21e-417e-b74a-405093919f7d\",\n                    \"expectedControlType\":
+      \"Vector2\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"MiddleClick\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"df145eb5-28b2-41a7-9f24-5b6670e307c0\",\n                    \"expectedControlType\":
+      \"\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\":
+      \"RightClick\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"2323597e-eec1-4a44-83a7-a1294a2b787f\",\n                    \"expectedControlType\":
+      \"\",\n                    \"processors\": \"\",\n                    \"interactions\":
+      \"\"\n                },\n                {\n                    \"name\":
+      \"TrackedDevicePosition\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"1fa0c09b-9d19-4183-b85c-7bbdd1b69485\",\n                    \"expectedControlType\":
+      \"Vector3\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                },\n                {\n                   
+      \"name\": \"TrackedDeviceOrientation\",\n                    \"type\": \"PassThrough\",\n                   
+      \"id\": \"a9374045-a362-419a-a4c5-a3b8c31c7f1c\",\n                    \"expectedControlType\":
+      \"Quaternion\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
+      [\n                {\n                    \"name\": \"Gamepad\",\n                   
+      \"id\": \"809f371f-c5e2-4e7a-83a1-d867598f40dd\",\n                    \"path\":
+      \"2DVector\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"14a5d6e8-4aaf-4119-a9ef-34b8c2c548bf\",\n                   
+      \"path\": \"<Gamepad>/leftStick/up\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Gamepad\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"up\",\n                   
+      \"id\": \"9144cbe6-05e1-4687-a6d7-24f99d23dd81\",\n                    \"path\":
+      \"<Gamepad>/rightStick/up\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"2db08d65-c5fb-421b-983f-c71163608d67\",\n                   
+      \"path\": \"<Gamepad>/leftStick/down\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Gamepad\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"down\",\n                   
+      \"id\": \"58748904-2ea9-4a80-8579-b500e6a76df8\",\n                    \"path\":
+      \"<Gamepad>/rightStick/down\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"left\",\n                    \"id\": \"8ba04515-75aa-45de-966d-393d9bbd1c14\",\n                   
+      \"path\": \"<Gamepad>/leftStick/left\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Gamepad\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"left\",\n                   
+      \"id\": \"712e721c-bdfb-4b23-a86c-a0d9fcfea921\",\n                    \"path\":
+      \"<Gamepad>/rightStick/left\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"fcd248ae-a788-4676-a12e-f4d81205600b\",\n                   
+      \"path\": \"<Gamepad>/leftStick/right\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Gamepad\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"right\",\n                   
+      \"id\": \"1f04d9bc-c50b-41a1-bfcc-afb75475ec20\",\n                    \"path\":
+      \"<Gamepad>/rightStick/right\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"fb8277d4-c5cd-4663-9dc7-ee3f0b506d90\",\n                   
+      \"path\": \"<Gamepad>/dpad\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Gamepad\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"Joystick\",\n                    \"id\": \"e25d9774-381c-4a61-b47c-7b6b299ad9f9\",\n                   
+      \"path\": \"2DVector\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"3db53b26-6601-41be-9887-63ac74e79d19\",\n                   
+      \"path\": \"<Joystick>/stick/up\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Joystick\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"0cb3e13e-3d90-4178-8ae6-d9c5501d653f\",\n                   
+      \"path\": \"<Joystick>/stick/down\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Joystick\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"left\",\n                   
+      \"id\": \"0392d399-f6dd-4c82-8062-c1e9c0d34835\",\n                    \"path\":
+      \"<Joystick>/stick/left\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Joystick\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"942a66d9-d42f-43d6-8d70-ecb4ba5363bc\",\n                   
+      \"path\": \"<Joystick>/stick/right\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Joystick\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"Keyboard\",\n                   
+      \"id\": \"ff527021-f211-4c02-933e-5976594c46ed\",\n                    \"path\":
+      \"2DVector\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"563fbfdd-0f09-408d-aa75-8642c4f08ef0\",\n                   
+      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"eb480147-c587-4a33-85ed-eb0ab9942c43\",\n                   
+      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"2bf42165-60bc-42ca-8072-8c13ab40239b\",\n                   
+      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"85d264ad-e0a0-4565-b7ff-1a37edde51ac\",\n                   
+      \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard&Mouse\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"left\",\n                   
+      \"id\": \"74214943-c580-44e4-98eb-ad7eebe17902\",\n                    \"path\":
+      \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"left\",\n                    \"id\": \"cea9b045-a000-445b-95b8-0c171af70a3b\",\n                   
+      \"path\": \"<Keyboard>/leftArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard&Mouse\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"right\",\n                   
+      \"id\": \"8607c725-d935-4808-84b1-8354e29bab63\",\n                    \"path\":
+      \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Navigate\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"4cda81dc-9edd-4e03-9d7c-a71a14345d0b\",\n                   
+      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Keyboard&Mouse\",\n                    \"action\": \"Navigate\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc\",\n                    \"path\":
+      \"*/{Submit}\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Submit\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"82627dcc-3b13-4ba9-841d-e4b746d6553e\",\n                   
+      \"path\": \"*/{Cancel}\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Cancel\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"c52c8e0b-8179-41d3-b8a1-d149033bbe86\",\n                   
+      \"path\": \"<Mouse>/position\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Point\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"e1394cbc-336e-44ce-9ea8-6007ed6193f7\",\n                   
+      \"path\": \"<Pen>/position\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"Keyboard&Mouse\",\n                   
+      \"action\": \"Point\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"5693e57a-238a-46ed-b5ae-e64e6e574302\",\n                   
+      \"path\": \"<Touchscreen>/touch*/position\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Touch\",\n                    \"action\": \"Point\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"4faf7dc9-b979-4210-aa8c-e808e1ef89f5\",\n                    \"path\":
+      \"<Mouse>/leftButton\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Click\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"8d66d5ba-88d7-48e6-b1cd-198bbfef7ace\",\n                   
+      \"path\": \"<Pen>/tip\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"Click\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"47c2a644-3ebc-4dae-a106-589b7ca75b59\",\n                   
+      \"path\": \"<Touchscreen>/touch*/press\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"Touch\",\n                    \"action\": \"Click\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"bb9e6b34-44bf-4381-ac63-5aa15d19f677\",\n                    \"path\":
+      \"<XRController>/trigger\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"XR\",\n                   
+      \"action\": \"Click\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"38c99815-14ea-4617-8627-164d27641299\",\n                   
+      \"path\": \"<Mouse>/scroll\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"ScrollWheel\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"24066f69-da47-44f3-a07e-0015fb02eb2e\",\n                   
+      \"path\": \"<Mouse>/middleButton\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \";Keyboard&Mouse\",\n                    \"action\": \"MiddleClick\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"4c191405-5738-4d4b-a523-c6a301dbf754\",\n                    \"path\":
+      \"<Mouse>/rightButton\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \";Keyboard&Mouse\",\n                   
+      \"action\": \"RightClick\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"7236c0d9-6ca3-47cf-a6ee-a97f5b59ea77\",\n                   
+      \"path\": \"<XRController>/devicePosition\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"XR\",\n                    \"action\": \"TrackedDevicePosition\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"23e01e3a-f935-4948-8d8b-9bcac77714fb\",\n                    \"path\":
+      \"<XRController>/deviceRotation\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"XR\",\n                   
+      \"action\": \"TrackedDeviceOrientation\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": false\n                }\n           
+      ]\n        }\n    ],\n    \"controlSchemes\": [\n        {\n            \"name\":
+      \"Keyboard&Mouse\",\n            \"bindingGroup\": \"Keyboard&Mouse\",\n           
+      \"devices\": [\n                {\n                    \"devicePath\": \"<Keyboard>\",\n                   
+      \"isOptional\": false,\n                    \"isOR\": false\n               
+      },\n                {\n                    \"devicePath\": \"<Mouse>\",\n                   
+      \"isOptional\": false,\n                    \"isOR\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"Gamepad\",\n           
+      \"bindingGroup\": \"Gamepad\",\n            \"devices\": [\n               
+      {\n                    \"devicePath\": \"<Gamepad>\",\n                   
+      \"isOptional\": false,\n                    \"isOR\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"Touch\",\n           
+      \"bindingGroup\": \"Touch\",\n            \"devices\": [\n                {\n                   
+      \"devicePath\": \"<Touchscreen>\",\n                    \"isOptional\": false,\n                   
+      \"isOR\": false\n                }\n            ]\n        },\n        {\n           
+      \"name\": \"Joystick\",\n            \"bindingGroup\": \"Joystick\",\n           
+      \"devices\": [\n                {\n                    \"devicePath\": \"<Joystick>\",\n                   
+      \"isOptional\": false,\n                    \"isOR\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"XR\",\n           
+      \"bindingGroup\": \"XR\",\n            \"devices\": [\n                {\n                   
+      \"devicePath\": \"<XRController>\",\n                    \"isOptional\": false,\n                   
+      \"isOR\": false\n                }\n            ]\n        }\n    ]\n}"
+    m_IsDirty: 0
+  m_Toolbar:
+    m_IsDirty: 0
+    m_SelectedControlSchemeIndex: -1
+    m_SelectedDeviceRequirementIndex: -1
+    m_ControlSchemes:
+    - m_Name: Keyboard&Mouse
+      m_BindingGroup: Keyboard&Mouse
+      m_DeviceRequirements:
+      - m_ControlPath: <Keyboard>
+        m_Flags: 0
+      - m_ControlPath: <Mouse>
+        m_Flags: 0
+    - m_Name: Gamepad
+      m_BindingGroup: Gamepad
+      m_DeviceRequirements:
+      - m_ControlPath: <Gamepad>
+        m_Flags: 0
+    - m_Name: Touch
+      m_BindingGroup: Touch
+      m_DeviceRequirements:
+      - m_ControlPath: <Touchscreen>
+        m_Flags: 0
+    - m_Name: Joystick
+      m_BindingGroup: Joystick
+      m_DeviceRequirements:
+      - m_ControlPath: <Joystick>
+        m_Flags: 0
+    - m_Name: XR
+      m_BindingGroup: XR
+      m_DeviceRequirements:
+      - m_ControlPath: <XRController>
+        m_Flags: 0
+    m_SearchText: 
+  m_DirtyTitle:
+    m_Text: (*) PlayerInputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Title:
+    m_Text: PlayerInputActions (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12079, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 390, y: 390}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Lighting
+    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 69
+    y: 73
+    width: 1297
+    height: 585
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,11 +839,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 69
     y: 73
-    width: 1413
-    height: 563
+    width: 1297
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_SplitPaneLeftWidth: 300
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,13 +863,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1483
+    x: 1458
     y: 73
-    width: 436
+    width: 461
     height: 966
   m_ViewDataDictionary: {fileID: 0}
   wideScreen: 0
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,12 +889,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 540
-    y: 657
-    width: 941
-    height: 382
+    x: 502
+    y: 679
+    width: 863
+    height: 360
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,19 +914,19 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1483
+    x: 1367
     y: 73
-    width: 436
+    width: 552
     height: 966
   m_ViewDataDictionary: {fileID: 0}
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  currentBranchAndRemoteHasUpdate: 1
+  currentTrackingStatusHasUpdate: 1
+  currentStatusEntriesHasUpdate: 1
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -477,9 +1011,9 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: '[master]'
@@ -696,18 +1230,970 @@ MonoBehaviour:
       workTreeStatus: 3
     changedFilesText: 1 changed file
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2020-10-06T09:11:45.291+01:00
+      updatedTimeString: 2020-10-08T16:44:59.284+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2020-10-06T09:17:38.935+01:00
+      updatedTimeString: 2020-10-08T16:44:59.130+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2020-10-06T09:11:45.539+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 4d83185b0eeb7953ebb42260b62d879a3c2cd295
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Revert "Updated Clayxels"
+      description: This reverts commit 51d711400068f2bf79c96af9d586dceadbddf2ee.
+      timeString: 2020-10-07T15:27:09.000+01:00
+      commitTimeString: 2020-10-07T15:27:09.000+01:00
+      changes:
+      - path: Assets\ClayxelContainer_23306.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+        projectPath: Assets\ClayxelContainer_23306.mat.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+        projectPath: Assets\ClayxelContainer_23306.mesh
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+        projectPath: Assets\ClayxelContainer_23306.mesh.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_28362.mat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat
+        projectPath: Assets\ClayxelContainer_28362.mat
+        originalPath: Assets\ClayxelContainer_23306.mat
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_28362.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat.meta
+        projectPath: Assets\ClayxelContainer_28362.mat.meta
+        originalPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+          Profile.asset.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky and
+          Fog Settings Profile.asset
+        projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene.unity
+        projectPath: Assets\Scenes\Clayxels Modeling Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Sky and Fog Settings Profile.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 51d711400068f2bf79c96af9d586dceadbddf2ee
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Updated Clayxels
+      description: 
+      timeString: 2020-10-07T15:18:42.000+01:00
+      commitTimeString: 2020-10-07T15:18:42.000+01:00
+      changes:
+      - path: Assets\ClayxelContainer_23306.mat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat
+        projectPath: Assets\ClayxelContainer_23306.mat
+        originalPath: Assets\ClayxelContainer_28362.mat
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+        projectPath: Assets\ClayxelContainer_23306.mat.meta
+        originalPath: Assets\ClayxelContainer_28362.mat.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+        projectPath: Assets\ClayxelContainer_23306.mesh
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+        projectPath: Assets\ClayxelContainer_23306.mesh.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky and
+          Fog Settings Profile.asset
+        projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene.unity
+        projectPath: Assets\Scenes\Clayxels Modeling Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Sky and Fog Settings Profile.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Sky and Fog Settings Profile.asset.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: a68ca2470638be7080bc90a18ad0d01275824327
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: No more builds
+      description: Moved it to itch.io
+      timeString: 2020-10-07T14:59:33.000+01:00
+      commitTimeString: 2020-10-07T14:59:33.000+01:00
+      changes:
+      - path: .gitignore
+        fullPath: D:\Unity Projects\Neon Tops Remastered\.gitignore
+        projectPath: .gitignore
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Builds\Builds.7z
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Builds.7z
+        projectPath: Builds\Builds.7z
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: af2af58755277e157e5fdef15e55116d3f5209f4
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Including a zip of the build
+      description: I'm getting a bug where the build runs fine out of the box, but
+        after I upload and download it from github I can't run it
+      timeString: 2020-10-06T18:46:48.000+01:00
+      commitTimeString: 2020-10-06T18:46:48.000+01:00
+      changes:
+      - path: Builds\Builds.7z
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Builds.7z
+        projectPath: Builds\Builds.7z
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f63f2ac275eb1b2d20d683e3d0003d5cb551bbcf
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Re-build
+      description: Thanks to Babak for spotting this mistake
+      timeString: 2020-10-06T18:03:21.000+01:00
+      commitTimeString: 2020-10-06T18:03:21.000+01:00
+      changes:
+      - path: Builds\Neon Tops Remastered_Data\globalgamemanagers
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers
+        projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\level0
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0
+        projectPath: Builds\Neon Tops Remastered_Data\level0
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 3869b4a3632519eb44326735d10fbe1c6b6179e5
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Including the Builds folder
+      description: 
+      timeString: 2020-10-06T17:14:34.000+01:00
+      commitTimeString: 2020-10-06T17:14:34.000+01:00
+      changes:
+      - path: .gitignore
+        fullPath: D:\Unity Projects\Neon Tops Remastered\.gitignore
+        projectPath: .gitignore
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Builds\GameAssembly.dll
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\GameAssembly.dll
+        projectPath: Builds\GameAssembly.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered.exe
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered.exe
+        projectPath: Builds\Neon Tops Remastered.exe
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+        projectPath: Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\Resources\unity default resources
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Resources\unity
+          default resources
+        projectPath: Builds\Neon Tops Remastered_Data\Resources\unity default resources
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+        projectPath: Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\app.info
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\app.info
+        projectPath: Builds\Neon Tops Remastered_Data\app.info
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\boot.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\boot.config
+        projectPath: Builds\Neon Tops Remastered_Data\boot.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\globalgamemanagers
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers
+        projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+        projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+        projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+        projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\level0
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0
+        projectPath: Builds\Neon Tops Remastered_Data\level0
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\level0.resS
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0.resS
+        projectPath: Builds\Neon Tops Remastered_Data\level0.resS
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\resources.assets
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\resources.assets
+        projectPath: Builds\Neon Tops Remastered_Data\resources.assets
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\resources.assets.resS
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\resources.assets.resS
+        projectPath: Builds\Neon Tops Remastered_Data\resources.assets.resS
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\sharedassets0.assets
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.assets
+        projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.assets
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+        projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\Neon Tops Remastered_Data\sharedassets0.resource
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.resource
+        projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.resource
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\UnityCrashHandler64.exe
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\UnityCrashHandler64.exe
+        projectPath: Builds\UnityCrashHandler64.exe
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\UnityPlayer.dll
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\UnityPlayer.dll
+        projectPath: Builds\UnityPlayer.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Builds\baselib.dll
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\baselib.dll
+        projectPath: Builds\baselib.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 3d49192c97111383522513a11ea9e81e3009d76e
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Same as before
+      description: 
+      timeString: 2020-10-06T17:02:14.000+01:00
+      commitTimeString: 2020-10-06T17:02:14.000+01:00
+      changes:
+      - path: Assets\Scenes\Main Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+        projectPath: Assets\Scenes\Main Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 39bff8f8101d7950f4228ef2075862bb4213be32
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Small adjustments to Bounce values
+      description: 
+      timeString: 2020-10-06T17:02:02.000+01:00
+      commitTimeString: 2020-10-06T17:02:02.000+01:00
+      changes:
+      - path: Assets\Prefabs\PlayerSphere.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+        projectPath: Assets\Prefabs\PlayerSphere.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 695fdad8cbd2e44751f0876c1e72b68f7b7eb866
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: New Enemy Chase Method implemented
+      description: 
+      timeString: 2020-10-06T16:49:00.000+01:00
+      commitTimeString: 2020-10-06T16:49:00.000+01:00
+      changes:
+      - path: Assets\Prefabs\EnemyConeHolder.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+        projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemyInputByBrain.cs
+        projectPath: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemyInputByBrain.cs.meta
+        projectPath: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySphereGizmo.cs
+        projectPath: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySphereGizmo.cs.meta
+        projectPath: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\PlayerMovement.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\PlayerMovement.cs
+        projectPath: Assets\Scripts\Player Related\PlayerMovement.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+        projectPath: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+        projectPath: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+        projectPath: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+        projectPath: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+        projectPath: Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\ScriptableObjects\Vector3SO.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\Vector3SO.cs
+        projectPath: Assets\Scripts\ScriptableObjects\Vector3SO.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Spin.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Spin.cs
+        projectPath: Assets\Scripts\Spin.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Spin.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Spin.cs.meta
+        projectPath: Assets\Scripts\Spin.cs.meta
+        originalPath: Assets\Scripts\SpinTest.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\SpinTest.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\SpinTest.cs
+        projectPath: Assets\Scripts\SpinTest.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 178b1ccbf104eb01187b6dfe25a2da165f5184f9
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Enemy bug fixed
+      description: The Visual prefab had a mesh collider
+      timeString: 2020-10-06T13:18:36.000+01:00
+      commitTimeString: 2020-10-06T13:18:36.000+01:00
+      changes:
+      - path: Assets\Prefabs\EnemyConeHolder.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+        projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Main Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+        projectPath: Assets\Scenes\Main Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: d3a9cd5d35d8c8341a408ae34c05fdb61064da13
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Created new enemy, but buggy
+      description: Enemy doesn't seem to forces applied to it, besides gravity
+      timeString: 2020-10-06T13:03:44.000+01:00
+      commitTimeString: 2020-10-06T13:03:44.000+01:00
+      changes:
+      - path: Assets\Materials\EnemyRed 1.mat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed
+          1.mat
+        projectPath: Assets\Materials\EnemyRed 1.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\EnemyRed 1.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed
+          1.mat.meta
+        projectPath: Assets\Materials\EnemyRed 1.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\EnemyRed_Emissive.mat
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed_Emissive.mat
+        projectPath: Assets\Materials\EnemyRed_Emissive.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\EnemyRed_Emissive.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed_Emissive.mat.meta
+        projectPath: Assets\Materials\EnemyRed_Emissive.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\EnemyConeHolder.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+        projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Prefabs\EnemyConeHolder.prefab.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab.meta
+        projectPath: Assets\Prefabs\EnemyConeHolder.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\Main Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+        projectPath: Assets\Scenes\Main Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs
+        projectPath: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs.meta
+        projectPath: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySpawner.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySpawner.cs
+        projectPath: Assets\Scripts\Enemies Related\EnemySpawner.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related\EnemySpawner.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related\EnemySpawner.cs.meta
+        projectPath: Assets\Scripts\Enemies Related\EnemySpawner.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        projectPath: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: c3635abc8af242b4e3e5bd666a57f3c91b96dc91
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Started implementing enemies with AI
+      description: Generalized SpawnPlayersVisualsPrefab into SpawnCharacterVisualPrefab,
+        as this works for both player chars and enemy chars
+      timeString: 2020-10-06T12:23:12.000+01:00
+      commitTimeString: 2020-10-06T12:23:12.000+01:00
+      changes:
+      - path: Assets\Prefabs\PlayerSphere.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+        projectPath: Assets\Prefabs\PlayerSphere.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\CharacterVisualObject.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\CharacterVisualObject.cs
+        projectPath: Assets\Scripts\CharacterVisualObject.cs
+        originalPath: Assets\Scripts\PlayerVisualObject.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\CharacterVisualObject.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\CharacterVisualObject.cs.meta
+        projectPath: Assets\Scripts\CharacterVisualObject.cs.meta
+        originalPath: Assets\Scripts\PlayerVisualObject.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Enemies Related.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies Related.meta
+        projectPath: Assets\Scripts\Enemies Related.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\AddPlayersToCameraTargets.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\AddPlayersToCameraTargets.cs
+        projectPath: Assets\Scripts\Player Related\AddPlayersToCameraTargets.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        projectPath: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\DirectionSphereSpawnerAndManager.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\DirectionSphereSpawnerAndManager.cs
+        projectPath: Assets\Scripts\Player Related\DirectionSphereSpawnerAndManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\RestartTrailOnPlayerLeftArena.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\RestartTrailOnPlayerLeftArena.cs
+        projectPath: Assets\Scripts\Player Related\RestartTrailOnPlayerLeftArena.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\SetPlayerColor.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\SetPlayerColor.cs
+        projectPath: Assets\Scripts\Player Related\SetPlayerColor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs
+        projectPath: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs.meta
+        projectPath: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs.meta
+        originalPath: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs
+        projectPath: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 00a21515d0f36eda5eff6e92e26683910d82755e
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Added a vertical force to the bounce
+      description: Players will now leave the ground a bit when they collide
+      timeString: 2020-10-06T11:34:33.000+01:00
+      commitTimeString: 2020-10-06T11:34:33.000+01:00
+      changes:
+      - path: Assets\Prefabs\PlayerSphere.prefab
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+        projectPath: Assets\Prefabs\PlayerSphere.prefab
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Bounce.cs
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Bounce.cs
+        projectPath: Assets\Scripts\Bounce.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 21d794a730aa343353d0b47c9b0251fa67d91d8f
+      mergeA: 
+      mergeB: 
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Saved the window layout
+      description: It kept crashing and losing my settings when I played in full
+        screen
+      timeString: 2020-10-06T11:14:48.000+01:00
+      commitTimeString: 2020-10-06T11:14:48.000+01:00
+      changes:
+      - path: Assets\Scenes\Main Scene.unity
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+        projectPath: Assets\Scenes\Main Scene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\WideCustom.wlt
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Settings\WideCustom.wlt
+        projectPath: Assets\Settings\WideCustom.wlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\WideCustom.wlt.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Settings\WideCustom.wlt.meta
+        projectPath: Assets\Settings\WideCustom.wlt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: 4b63364333d6a21d5647d14f7ac76f49ebc41e32
       mergeA: 
       mergeB: 
@@ -10979,16 +12465,990 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 0
+    statusAhead: 1
     lastLogChangedEvent:
-      updatedTimeString: 2020-10-05T22:22:13.706+01:00
+      updatedTimeString: 2020-10-07T15:27:10.713+01:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2020-10-05T22:21:19.514+01:00
+      updatedTimeString: 2020-10-07T15:27:50.969+01:00
       cacheType: 5
     historyControl:
-      scroll: {x: 0, y: 2977}
+      scroll: {x: 0, y: 0}
       entries:
+      - commitID: 4d83185b0eeb7953ebb42260b62d879a3c2cd295
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Revert "Updated Clayxels"
+        description: This reverts commit 51d711400068f2bf79c96af9d586dceadbddf2ee.
+        timeString: 2020-10-07T15:27:09.000+01:00
+        commitTimeString: 2020-10-07T15:27:09.000+01:00
+        changes:
+        - path: Assets\ClayxelContainer_23306.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+          projectPath: Assets\ClayxelContainer_23306.mat.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_23306.mesh
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+          projectPath: Assets\ClayxelContainer_23306.mesh
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_23306.mesh.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+          projectPath: Assets\ClayxelContainer_23306.mesh.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_28362.mat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat
+          projectPath: Assets\ClayxelContainer_28362.mat
+          originalPath: Assets\ClayxelContainer_23306.mat
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_28362.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat.meta
+          projectPath: Assets\ClayxelContainer_28362.mat.meta
+          originalPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky
+            and Fog Settings Profile.asset
+          projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.unity
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Sky and Fog Settings Profile.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 51d711400068f2bf79c96af9d586dceadbddf2ee
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Updated Clayxels
+        description: 
+        timeString: 2020-10-07T15:18:42.000+01:00
+        commitTimeString: 2020-10-07T15:18:42.000+01:00
+        changes:
+        - path: Assets\ClayxelContainer_23306.mat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat
+          projectPath: Assets\ClayxelContainer_23306.mat
+          originalPath: Assets\ClayxelContainer_28362.mat
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_23306.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+          projectPath: Assets\ClayxelContainer_23306.mat.meta
+          originalPath: Assets\ClayxelContainer_28362.mat.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_23306.mesh
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+          projectPath: Assets\ClayxelContainer_23306.mesh
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\ClayxelContainer_23306.mesh.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+          projectPath: Assets\ClayxelContainer_23306.mesh.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky
+            and Fog Settings Profile.asset
+          projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.unity
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Sky and Fog Settings Profile.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Sky and Fog Settings Profile.asset.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: a68ca2470638be7080bc90a18ad0d01275824327
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: No more builds
+        description: Moved it to itch.io
+        timeString: 2020-10-07T14:59:33.000+01:00
+        commitTimeString: 2020-10-07T14:59:33.000+01:00
+        changes:
+        - path: .gitignore
+          fullPath: D:\Unity Projects\Neon Tops Remastered\.gitignore
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Builds\Builds.7z
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Builds.7z
+          projectPath: Builds\Builds.7z
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: af2af58755277e157e5fdef15e55116d3f5209f4
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Including a zip of the build
+        description: I'm getting a bug where the build runs fine out of the box,
+          but after I upload and download it from github I can't run it
+        timeString: 2020-10-06T18:46:48.000+01:00
+        commitTimeString: 2020-10-06T18:46:48.000+01:00
+        changes:
+        - path: Builds\Builds.7z
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Builds.7z
+          projectPath: Builds\Builds.7z
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f63f2ac275eb1b2d20d683e3d0003d5cb551bbcf
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Re-build
+        description: Thanks to Babak for spotting this mistake
+        timeString: 2020-10-06T18:03:21.000+01:00
+        commitTimeString: 2020-10-06T18:03:21.000+01:00
+        changes:
+        - path: Builds\Neon Tops Remastered_Data\globalgamemanagers
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers
+          projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\level0
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0
+          projectPath: Builds\Neon Tops Remastered_Data\level0
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 3869b4a3632519eb44326735d10fbe1c6b6179e5
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Including the Builds folder
+        description: 
+        timeString: 2020-10-06T17:14:34.000+01:00
+        commitTimeString: 2020-10-06T17:14:34.000+01:00
+        changes:
+        - path: .gitignore
+          fullPath: D:\Unity Projects\Neon Tops Remastered\.gitignore
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Builds\GameAssembly.dll
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\GameAssembly.dll
+          projectPath: Builds\GameAssembly.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered.exe
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered.exe
+          projectPath: Builds\Neon Tops Remastered.exe
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+          projectPath: Builds\Neon Tops Remastered_Data\Plugins\x86_64\retopoLib.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\Resources\unity default resources
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Resources\unity
+            default resources
+          projectPath: Builds\Neon Tops Remastered_Data\Resources\unity default resources
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+          projectPath: Builds\Neon Tops Remastered_Data\Resources\unity_builtin_extra
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\app.info
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\app.info
+          projectPath: Builds\Neon Tops Remastered_Data\app.info
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\boot.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\boot.config
+          projectPath: Builds\Neon Tops Remastered_Data\boot.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\globalgamemanagers
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers
+          projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+          projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+          projectPath: Builds\Neon Tops Remastered_Data\globalgamemanagers.assets.resS
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\Metadata\global-metadata.dat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\Resources\mscorlib.dll-resources.dat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\Browsers\Compat.browser
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\DefaultWsdlHelpGenerator.aspx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\machine.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\settings.map
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\2.0\web.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\Browsers\Compat.browser
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\DefaultWsdlHelpGenerator.aspx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\machine.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\settings.map
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.0\web.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\Browsers\Compat.browser
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\DefaultWsdlHelpGenerator.aspx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\machine.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\settings.map
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\4.5\web.config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\browscap.ini
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\config
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+          projectPath: Builds\Neon Tops Remastered_Data\il2cpp_data\etc\mono\mconfig\config.xml
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\level0
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0
+          projectPath: Builds\Neon Tops Remastered_Data\level0
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\level0.resS
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\level0.resS
+          projectPath: Builds\Neon Tops Remastered_Data\level0.resS
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\resources.assets
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\resources.assets
+          projectPath: Builds\Neon Tops Remastered_Data\resources.assets
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\resources.assets.resS
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\resources.assets.resS
+          projectPath: Builds\Neon Tops Remastered_Data\resources.assets.resS
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\sharedassets0.assets
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.assets
+          projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.assets
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+          projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.assets.resS
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\Neon Tops Remastered_Data\sharedassets0.resource
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\Neon Tops Remastered_Data\sharedassets0.resource
+          projectPath: Builds\Neon Tops Remastered_Data\sharedassets0.resource
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\UnityCrashHandler64.exe
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\UnityCrashHandler64.exe
+          projectPath: Builds\UnityCrashHandler64.exe
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\UnityPlayer.dll
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\UnityPlayer.dll
+          projectPath: Builds\UnityPlayer.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Builds\baselib.dll
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Builds\baselib.dll
+          projectPath: Builds\baselib.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 3d49192c97111383522513a11ea9e81e3009d76e
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Same as before
+        description: 
+        timeString: 2020-10-06T17:02:14.000+01:00
+        commitTimeString: 2020-10-06T17:02:14.000+01:00
+        changes:
+        - path: Assets\Scenes\Main Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+          projectPath: Assets\Scenes\Main Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 39bff8f8101d7950f4228ef2075862bb4213be32
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Small adjustments to Bounce values
+        description: 
+        timeString: 2020-10-06T17:02:02.000+01:00
+        commitTimeString: 2020-10-06T17:02:02.000+01:00
+        changes:
+        - path: Assets\Prefabs\PlayerSphere.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+          projectPath: Assets\Prefabs\PlayerSphere.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 695fdad8cbd2e44751f0876c1e72b68f7b7eb866
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: New Enemy Chase Method implemented
+        description: 
+        timeString: 2020-10-06T16:49:00.000+01:00
+        commitTimeString: 2020-10-06T16:49:00.000+01:00
+        changes:
+        - path: Assets\Prefabs\EnemyConeHolder.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+          projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemyInputByBrain.cs
+          projectPath: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemyInputByBrain.cs.meta
+          projectPath: Assets\Scripts\Enemies Related\EnemyInputByBrain.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySphereGizmo.cs
+          projectPath: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySphereGizmo.cs.meta
+          projectPath: Assets\Scripts\Enemies Related\EnemySphereGizmo.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\PlayerMovement.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\PlayerMovement.cs
+          projectPath: Assets\Scripts\Player Related\PlayerMovement.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+          projectPath: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+          projectPath: Assets\Scripts\ScriptableObjects\EnemyBrainSO.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+          projectPath: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+          projectPath: Assets\Scripts\ScriptableObjects\EnemyBrain_Default.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+          projectPath: Assets\Scripts\ScriptableObjects\PlayerProperties.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\ScriptableObjects\Vector3SO.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\ScriptableObjects\Vector3SO.cs
+          projectPath: Assets\Scripts\ScriptableObjects\Vector3SO.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Spin.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Spin.cs
+          projectPath: Assets\Scripts\Spin.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Spin.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Spin.cs.meta
+          projectPath: Assets\Scripts\Spin.cs.meta
+          originalPath: Assets\Scripts\SpinTest.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\SpinTest.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\SpinTest.cs
+          projectPath: Assets\Scripts\SpinTest.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 178b1ccbf104eb01187b6dfe25a2da165f5184f9
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Enemy bug fixed
+        description: The Visual prefab had a mesh collider
+        timeString: 2020-10-06T13:18:36.000+01:00
+        commitTimeString: 2020-10-06T13:18:36.000+01:00
+        changes:
+        - path: Assets\Prefabs\EnemyConeHolder.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+          projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Main Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+          projectPath: Assets\Scenes\Main Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: d3a9cd5d35d8c8341a408ae34c05fdb61064da13
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Created new enemy, but buggy
+        description: Enemy doesn't seem to forces applied to it, besides gravity
+        timeString: 2020-10-06T13:03:44.000+01:00
+        commitTimeString: 2020-10-06T13:03:44.000+01:00
+        changes:
+        - path: Assets\Materials\EnemyRed 1.mat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed
+            1.mat
+          projectPath: Assets\Materials\EnemyRed 1.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\EnemyRed 1.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed
+            1.mat.meta
+          projectPath: Assets\Materials\EnemyRed 1.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\EnemyRed_Emissive.mat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed_Emissive.mat
+          projectPath: Assets\Materials\EnemyRed_Emissive.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\EnemyRed_Emissive.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\EnemyRed_Emissive.mat.meta
+          projectPath: Assets\Materials\EnemyRed_Emissive.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\EnemyConeHolder.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab
+          projectPath: Assets\Prefabs\EnemyConeHolder.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Prefabs\EnemyConeHolder.prefab.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\EnemyConeHolder.prefab.meta
+          projectPath: Assets\Prefabs\EnemyConeHolder.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\Main Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+          projectPath: Assets\Scenes\Main Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySelfVisualSpawner.cs
+          projectPath: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySelfVisualSpawner.cs.meta
+          projectPath: Assets\Scripts\Enemies Related\EnemySelfVisualSpawner.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySpawner.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySpawner.cs
+          projectPath: Assets\Scripts\Enemies Related\EnemySpawner.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related\EnemySpawner.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related\EnemySpawner.cs.meta
+          projectPath: Assets\Scripts\Enemies Related\EnemySpawner.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\BringPlayerBackToArena.cs
+          projectPath: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: c3635abc8af242b4e3e5bd666a57f3c91b96dc91
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Started implementing enemies with AI
+        description: Generalized SpawnPlayersVisualsPrefab into SpawnCharacterVisualPrefab,
+          as this works for both player chars and enemy chars
+        timeString: 2020-10-06T12:23:12.000+01:00
+        commitTimeString: 2020-10-06T12:23:12.000+01:00
+        changes:
+        - path: Assets\Prefabs\PlayerSphere.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+          projectPath: Assets\Prefabs\PlayerSphere.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\CharacterVisualObject.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\CharacterVisualObject.cs
+          projectPath: Assets\Scripts\CharacterVisualObject.cs
+          originalPath: Assets\Scripts\PlayerVisualObject.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\CharacterVisualObject.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\CharacterVisualObject.cs.meta
+          projectPath: Assets\Scripts\CharacterVisualObject.cs.meta
+          originalPath: Assets\Scripts\PlayerVisualObject.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Enemies Related.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Enemies
+            Related.meta
+          projectPath: Assets\Scripts\Enemies Related.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\AddPlayersToCameraTargets.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\AddPlayersToCameraTargets.cs
+          projectPath: Assets\Scripts\Player Related\AddPlayersToCameraTargets.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\BringPlayerBackToArena.cs
+          projectPath: Assets\Scripts\Player Related\BringPlayerBackToArena.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\DirectionSphereSpawnerAndManager.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\DirectionSphereSpawnerAndManager.cs
+          projectPath: Assets\Scripts\Player Related\DirectionSphereSpawnerAndManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\RestartTrailOnPlayerLeftArena.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\RestartTrailOnPlayerLeftArena.cs
+          projectPath: Assets\Scripts\Player Related\RestartTrailOnPlayerLeftArena.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\SetPlayerColor.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\SetPlayerColor.cs
+          projectPath: Assets\Scripts\Player Related\SetPlayerColor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\SpawnCharacterVisualsPrefab.cs
+          projectPath: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\SpawnCharacterVisualsPrefab.cs.meta
+          projectPath: Assets\Scripts\Player Related\SpawnCharacterVisualsPrefab.cs.meta
+          originalPath: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player
+            Related\SpawnPlayersVisualsPrefab.cs
+          projectPath: Assets\Scripts\Player Related\SpawnPlayersVisualsPrefab.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 00a21515d0f36eda5eff6e92e26683910d82755e
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Added a vertical force to the bounce
+        description: Players will now leave the ground a bit when they collide
+        timeString: 2020-10-06T11:34:33.000+01:00
+        commitTimeString: 2020-10-06T11:34:33.000+01:00
+        changes:
+        - path: Assets\Prefabs\PlayerSphere.prefab
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
+          projectPath: Assets\Prefabs\PlayerSphere.prefab
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Bounce.cs
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Bounce.cs
+          projectPath: Assets\Scripts\Bounce.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 21d794a730aa343353d0b47c9b0251fa67d91d8f
+        mergeA: 
+        mergeB: 
+        authorName: Letail
+        authorEmail: francisco.tadeu.torres@gmail.com
+        commitEmail: francisco.tadeu.torres@gmail.com
+        commitName: Letail
+        summary: Saved the window layout
+        description: It kept crashing and losing my settings when I played in full
+          screen
+        timeString: 2020-10-06T11:14:48.000+01:00
+        commitTimeString: 2020-10-06T11:14:48.000+01:00
+        changes:
+        - path: Assets\Scenes\Main Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
+          projectPath: Assets\Scenes\Main Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\WideCustom.wlt
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Settings\WideCustom.wlt
+          projectPath: Assets\Settings\WideCustom.wlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\WideCustom.wlt.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Settings\WideCustom.wlt.meta
+          projectPath: Assets\Settings\WideCustom.wlt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: 4b63364333d6a21d5647d14f7ac76f49ebc41e32
         mergeA: 
         mergeB: 
@@ -21327,92 +23787,65 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 0
-      selectedIndex: -1
+      statusAhead: 1
+      selectedIndex: 0
     selectedEntry:
-      commitID: 
+      commitID: 4d83185b0eeb7953ebb42260b62d879a3c2cd295
       mergeA: 
       mergeB: 
-      authorName: 
-      authorEmail: 
-      commitEmail: 
-      commitName: 
-      summary: 
-      description: 
-      timeString: 0001-01-01T00:00:00.000+00:00
-      commitTimeString: 0001-01-01T00:00:00.000+00:00
+      authorName: Letail
+      authorEmail: francisco.tadeu.torres@gmail.com
+      commitEmail: francisco.tadeu.torres@gmail.com
+      commitName: Letail
+      summary: Revert "Updated Clayxels"
+      description: This reverts commit 51d711400068f2bf79c96af9d586dceadbddf2ee.
+      timeString: 2020-10-07T15:27:09.000+01:00
+      commitTimeString: 2020-10-07T15:27:09.000+01:00
       changes:
-      - path: Assets\ClayxelContainer_26562.mesh
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_26562.mesh
-        projectPath: Assets\ClayxelContainer_26562.mesh
+      - path: Assets\ClayxelContainer_23306.mat.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+        projectPath: Assets\ClayxelContainer_23306.mat.meta
         originalPath: 
-        indexStatus: 4
+        indexStatus: 5
         workTreeStatus: 0
-      - path: Assets\ClayxelContainer_26562.mesh.meta
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_26562.mesh.meta
-        projectPath: Assets\ClayxelContainer_26562.mesh.meta
+      - path: Assets\ClayxelContainer_23306.mesh
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+        projectPath: Assets\ClayxelContainer_23306.mesh
         originalPath: 
-        indexStatus: 4
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+        projectPath: Assets\ClayxelContainer_23306.mesh.meta
+        originalPath: 
+        indexStatus: 5
         workTreeStatus: 0
       - path: Assets\ClayxelContainer_28362.mat
         fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat
         projectPath: Assets\ClayxelContainer_28362.mat
-        originalPath: 
-        indexStatus: 4
+        originalPath: Assets\ClayxelContainer_23306.mat
+        indexStatus: 6
         workTreeStatus: 0
       - path: Assets\ClayxelContainer_28362.mat.meta
         fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat.meta
         projectPath: Assets\ClayxelContainer_28362.mat.meta
-        originalPath: 
-        indexStatus: 4
+        originalPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+          Profile.asset.meta
+        indexStatus: 6
         workTreeStatus: 0
-      - path: Assets\ClayxelContainer_28362.mesh
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mesh
-        projectPath: Assets\ClayxelContainer_28362.mesh
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\ClayxelContainer_28362.mesh.meta
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mesh.meta
-        projectPath: Assets\ClayxelContainer_28362.mesh.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Materials\TransparentWhite.mat
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\TransparentWhite.mat
-        projectPath: Assets\Materials\TransparentWhite.mat
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Materials\TransparentWhite.mat.meta
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Materials\TransparentWhite.mat.meta
-        projectPath: Assets\Materials\TransparentWhite.mat.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\PhysicsMaterials.meta
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\PhysicsMaterials.meta
-        projectPath: Assets\PhysicsMaterials.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\PhysicsMaterials\SlipperyFloor.physicMaterial
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\PhysicsMaterials\SlipperyFloor.physicMaterial
-        projectPath: Assets\PhysicsMaterials\SlipperyFloor.physicMaterial
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\PhysicsMaterials\SlipperyFloor.physicMaterial.meta
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\PhysicsMaterials\SlipperyFloor.physicMaterial.meta
-        projectPath: Assets\PhysicsMaterials\SlipperyFloor.physicMaterial.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Prefabs\PlayerSphere.prefab
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Prefabs\PlayerSphere.prefab
-        projectPath: Assets\Prefabs\PlayerSphere.prefab
+      - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky and
+          Fog Settings Profile.asset
+        projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
         originalPath: 
         indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+        originalPath: 
+        indexStatus: 5
         workTreeStatus: 0
       - path: Assets\Scenes\Clayxels Modeling Scene.unity
         fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
@@ -21421,48 +23854,520 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: Assets\Scenes\Main Scene.unity
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene.unity
-        projectPath: Assets\Scenes\Main Scene.unity
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
         originalPath: 
-        indexStatus: 3
+        indexStatus: 5
         workTreeStatus: 0
-      - path: Assets\Scenes\Main Scene\Global Volume Profile.asset
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Main Scene\Global
-          Volume Profile.asset
-        projectPath: Assets\Scenes\Main Scene\Global Volume Profile.asset
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\LightingData.asset.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
         originalPath: 
-        indexStatus: 3
+        indexStatus: 5
         workTreeStatus: 0
-      - path: Assets\Scripts\Player Related\PlayerInOutOfArenaTrigger.cs
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\PlayerInOutOfArenaTrigger.cs
-        projectPath: Assets\Scripts\Player Related\PlayerInOutOfArenaTrigger.cs
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
         originalPath: 
-        indexStatus: 3
+        indexStatus: 5
         workTreeStatus: 0
-      - path: Assets\Scripts\Player Related\PlayerMovement.cs
-        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scripts\Player Related\PlayerMovement.cs
-        projectPath: Assets\Scripts\Player Related\PlayerMovement.cs
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_dir.png.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
         originalPath: 
-        indexStatus: 3
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Lightmap-0_comp_light.exr.meta
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels Modeling
+          Scene\Sky and Fog Settings Profile.asset
+        projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        originalPath: 
+        indexStatus: 5
         workTreeStatus: 0
     treeChanges:
       assets:
         keys: []
         values: []
       folders:
-        keys: []
-        values: []
+        keys:
+        - Assets
+        - Assets\Presets
+        - Assets\Scenes
+        - Assets\Scenes\Clayxels Modeling Scene
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Presets
+          label: Presets
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\Clayxels Modeling Scene
+          label: Clayxels Modeling Scene
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
       title: 
-      pathSeparator: /
+      pathSeparator: \
       displayRootNode: 0
       isSelectable: 1
       isCheckable: 0
       isUsingGlobalSelection: 0
-      nodes: []
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mat.meta
+        label: ClayxelContainer_23306.mat.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ClayxelContainer_23306.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mat.meta
+          projectPath: Assets\ClayxelContainer_23306.mat.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh
+        label: ClayxelContainer_23306.mesh
+        level: 1
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ClayxelContainer_23306.mesh
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh
+          projectPath: Assets\ClayxelContainer_23306.mesh
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\ClayxelContainer_23306.mesh.meta
+        label: ClayxelContainer_23306.mesh.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ClayxelContainer_23306.mesh.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_23306.mesh.meta
+          projectPath: Assets\ClayxelContainer_23306.mesh.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\ClayxelContainer_28362.mat
+        label: ClayxelContainer_28362.mat
+        level: 1
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ClayxelContainer_28362.mat
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat
+          projectPath: Assets\ClayxelContainer_28362.mat
+          originalPath: Assets\ClayxelContainer_23306.mat
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\ClayxelContainer_28362.mat.meta
+        label: ClayxelContainer_28362.mat.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\ClayxelContainer_28362.mat.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\ClayxelContainer_28362.mat.meta
+          projectPath: Assets\ClayxelContainer_28362.mat.meta
+          originalPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Presets
+        label: Presets
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Presets\My Sky and Fog Settings Profile.asset
+        label: My Sky and Fog Settings Profile.asset
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Presets\My Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Presets\My Sky
+            and Fog Settings Profile.asset
+          projectPath: Assets\Presets\My Sky and Fog Settings Profile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.meta
+        label: Clayxels Modeling Scene.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene.unity
+        label: Clayxels Modeling Scene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene.unity
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene.unity
+          projectPath: Assets\Scenes\Clayxels Modeling Scene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene
+        label: Clayxels Modeling Scene
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+        label: LightingData.asset
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+        label: LightingData.asset.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\LightingData.asset.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\LightingData.asset.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+        label: Lightmap-0_comp_dir.png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+        label: Lightmap-0_comp_dir.png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_dir.png.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_dir.png.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+        label: Lightmap-0_comp_light.exr
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+        label: Lightmap-0_comp_light.exr.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Lightmap-0_comp_light.exr.meta
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Lightmap-0_comp_light.exr.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+        label: Sky and Fog Settings Profile.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings Profile.asset
+          fullPath: D:\Unity Projects\Neon Tops Remastered\Assets\Scenes\Clayxels
+            Modeling Scene\Sky and Fog Settings Profile.asset
+          projectPath: Assets\Scenes\Clayxels Modeling Scene\Sky and Fog Settings
+            Profile.asset
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
       selectedNode:
         path: 
         label: 
@@ -21485,32 +24390,32 @@ MonoBehaviour:
     detailsScroll: {x: 0, y: 0}
   settingsView:
     gitPathView:
-      gitPath: 
-      gitLfsPath: 
+      gitPath: C:\Users\Francisco\AppData\Local\GitHubUnity\git\cmd\git.exe
+      gitLfsPath: C:\Users\Francisco\AppData\Local\GitHubUnity\git-lfs\git-lfs.exe
       errorMessage: 
       resetToBundled: 0
       resetToSystem: 0
       changingManually: 0
-    hasRemote: 0
+    hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
-    metricsEnabled: 0
-    newRepositoryRemoteUrl: 
-    repositoryRemoteName: 
-    repositoryRemoteUrl: 
+      updatedTimeString: 2020-10-06T17:03:41.774+01:00
+      cacheType: 1
+    metricsEnabled: 1
+    newRepositoryRemoteUrl: https://github.com/Letail/NeonTopsRemastered.git
+    repositoryRemoteName: origin
+    repositoryRemoteUrl: https://github.com/Letail/NeonTopsRemastered.git
     scroll: {x: 0, y: 0}
     userSettingsView:
-      gitName: 
-      gitEmail: 
-      newGitName: 
-      newGitEmail: 
+      gitName: Letail
+      gitEmail: francisco.tadeu.torres@gmail.com
+      newGitName: Letail
+      newGitEmail: francisco.tadeu.torres@gmail.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 
-        cacheType: 0
-    webTimeout: 0
-    gitTimeout: 0
+        updatedTimeString: 2020-10-06T17:12:09.593+01:00
+        cacheType: 8
+    webTimeout: 3000
+    gitTimeout: 5000
   locksView:
     currentRemoteHasUpdate: 0
     currentStatusEntriesHasUpdate: 0
@@ -21559,7 +24464,7 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/Letail/NeonTopsRemastered.git
-  statusAhead: 0
+  statusAhead: 1
   statusBehind: 0
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
@@ -21572,13 +24477,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2020-10-06T09:11:45.291+01:00
+    updatedTimeString: 2020-10-08T16:09:45.105+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2020-10-06T09:17:38.959+01:00
+    updatedTimeString: 2020-10-08T16:09:46.803+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2020-10-06T09:17:38.935+01:00
+    updatedTimeString: 2020-10-08T16:09:46.757+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -21598,11 +24503,11 @@ MonoBehaviour:
     m_Tooltip: 
   repositoryProgressValue: 0
   repositoryProgressMessage: 
-  appManagerProgressValue: 0.5
-  appManagerProgressMessage: Setting up git...
+  appManagerProgressValue: 1
+  appManagerProgressMessage: Initialized
   connections: []
   primaryConnectionUsername: Letail
---- !u!114 &16
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21622,10 +24527,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 472
-    y: 19
-    width: 941
-    height: 382
+    x: 502
+    y: 679
+    width: 863
+    height: 360
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -21640,21 +24545,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Settings
     m_Globs: []
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
-  m_LastFoldersGridSize: -1
+  - Assets/Settings
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity Projects\Neon Tops Remastered
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a2580000
-    m_LastClickedID: 22690
-    m_ExpandedIDs: 0000000080580000825800008458000086580000885800008a5800008c5800008e58000090580000925800009458000096580000985800009a5800009c5800009e580000a0580000a2580000a4580000a658000000ca9a3b
+    scrollPos: {x: 0, y: 188}
+    m_SelectedIDs: f6590000
+    m_LastClickedID: 23030
+    m_ExpandedIDs: 0000000096590000985900009a5900009c5900009e590000a0590000a2590000a4590000a6590000a8590000aa590000ac590000ae590000b0590000b2590000b4590000b6590000b8590000ba590000f459000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -21682,7 +24587,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080580000825800008458000086580000885800008a5800008c5800008e58000090580000925800009458000096580000985800009a5800009c5800009e580000a0580000a2580000a4580000a6580000
+    m_ExpandedIDs: 0000000096590000985900009a5900009c5900009e590000a0590000a2590000a4590000a6590000a8590000aa590000ac590000ae590000b0590000b2590000b4590000b6590000b8590000ba590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -21707,26 +24612,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000
+    m_SelectedInstanceIDs: e2530000
+    m_LastClickedInstanceID: 21474
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300001a8efeff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: InputSystem.inputsettings
+      m_OriginalName: InputSystem.inputsettings
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 704
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -21735,10 +24640,10 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &17
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21758,15 +24663,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1483
+    x: 1367
     y: 73
-    width: 436
+    width: 552
     height: 966
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: 159
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -21776,7 +24681,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &18
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21798,31 +24703,31 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 19
-    width: 470
-    height: 382
+    width: 432
+    height: 360
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      scrollPos: {x: 0, y: 309}
+      m_SelectedIDs: e2530000
       m_LastClickedID: 0
-      m_ExpandedIDs: 66fbffff
+      m_ExpandedIDs: ec8cffff1efbffff744b0000804b00009c4b0000284c0000944c0000544d00005c4d00001a4e00002c4e0000584e0000844e00008e4e0000284f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Player 2
+        m_OriginalName: Player 2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 19672
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 2}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -21830,7 +24735,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &19
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21852,8 +24757,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 69
     y: 73
-    width: 1413
-    height: 563
+    width: 1297
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -21861,14 +24766,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2124444, y: 2.1668563, z: -0.13492434}
+    m_Target: {x: 394.94012, y: 351.16794, z: -96.874916}
     speed: 2
-    m_Value: {x: 1.2124444, y: 2.1668563, z: -0.13492434}
+    m_Value: {x: 394.94012, y: 351.16794, z: -96.874916}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -21880,7 +24785,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -21894,8 +24799,16 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
+      m_Size: {x: 1, y: 1}
     yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    zGrid:
       m_Fade:
         m_Target: 1
         speed: 2
@@ -21903,29 +24816,21 @@ MonoBehaviour:
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
-    zGrid:
-      m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1509994, y: 0.68961054, z: -0.15045601, w: -0.69209903}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.1509994, y: 0.68961054, z: -0.15045601, w: -0.6920991}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.640059
+    m_Target: 246.88443
     speed: 2
-    m_Value: 0.640059
+    m_Value: 246.88443
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -21939,14 +24844,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewRotation: {x: -0.33113366, y: 0.0014191134, z: -0.0005144591, w: -0.9435964}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
-  m_SceneVisActive: 1
+  m_SceneVisActive: 0
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &20
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21968,8 +24873,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 69
     y: 73
-    width: 1413
-    height: 564
+    width: 1297
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -21977,23 +24882,23 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1413, y: 543}
+  m_TargetSize: {x: 1003, y: 564}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
   m_MaximizeOnPlay: 0
   m_UseMipMap: 0
-  m_VSyncEnabled: 0
+  m_VSyncEnabled: 1
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -706.5
-    m_HBaseRangeMax: 706.5
+    m_HBaseRangeMin: -501.5
+    m_HBaseRangeMax: 501.5
     m_VBaseRangeMin: -282
     m_VBaseRangeMax: 282
     m_HAllowExceedBaseRangeMin: 1
@@ -22004,7 +24909,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -22012,30 +24917,30 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
-      width: 1413
+      y: 21
+      width: 1297
       height: 564
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 706.5, y: 282}
+    m_Translation: {x: 648.5, y: 282}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -706.5
+      x: -648.5
       y: -282
-      width: 1413
+      width: 1297
       height: 564
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1413, y: 564}
+  m_LastWindowPixelSize: {x: 1297, y: 585}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &21
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22055,12 +24960,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 540
-    y: 657
-    width: 941
-    height: 382
+    x: 502
+    y: 679
+    width: 863
+    height: 360
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &22
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

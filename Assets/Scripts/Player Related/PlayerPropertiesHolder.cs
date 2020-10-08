@@ -10,6 +10,6 @@ public class PlayerPropertiesHolder : MonoBehaviour
 
     private void Start()
     {
-        if(playerProperties == null) Debug.LogError("Player doesn't have it's properties set!");
+        if(playerProperties == null) Debug.LogError("Player doesn't have its properties set!");
     }
 }
