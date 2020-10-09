@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
+public class TabButton : Button, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler, ISubmitHandler, ICancelHandler
 {
     public TabGroup tabGroup;
     [HideInInspector]
@@ -16,6 +16,11 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public delegate void OnTabDeselected(GameObject gameObject);
     public static event OnTabDeselected OnTabDeselectedEvent;
+    void Start()
+    {
+        background = GetComponent<Image>();
+        tabGroup.Subscribe(this);
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -32,12 +37,16 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
         tabGroup.OnTabExit(this);
     }
 
-    void Start()
+    //Handler For Directional Input
+    public void OnSubmit(BaseEventData eventData)
     {
-        background = GetComponent<Image>();
-        tabGroup.Subscribe(this);
+        tabGroup.OnTabSelected(this);
     }
 
+    public void OnCancel(BaseEventData eventData)
+    {
+        tabGroup.OnTabExit(this);
+    }
 
     public void Select()
     {
@@ -47,4 +56,5 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         OnTabDeselectedEvent?.Invoke(this.gameObject);
     }
+
 }
