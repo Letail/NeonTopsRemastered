@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class TabButton : Button, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler, ISubmitHandler, ICancelHandler
+public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler, ISubmitHandler, ICancelHandler
 {
     public TabGroup tabGroup;
     [HideInInspector]
@@ -16,6 +16,7 @@ public class TabButton : Button, IPointerEnterHandler, IPointerClickHandler, IPo
 
     public delegate void OnTabDeselected(GameObject gameObject);
     public static event OnTabDeselected OnTabDeselectedEvent;
+
     void Start()
     {
         background = GetComponent<Image>();
