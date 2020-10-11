@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3761567051570250985}
   - component: {fileID: 3191714296467895884}
   - component: {fileID: 3112693899734996191}
+  - component: {fileID: -8019612703453856285}
   m_Layer: 0
   m_Name: DirectionSphere
   m_TagString: Untagged
@@ -123,3 +124,15 @@ MonoBehaviour:
   playerToFollow: {fileID: 0}
   directionVector: {x: 0, y: 0}
   distanceFromPlayer: 0.2
+--- !u!114 &-8019612703453856285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2294835342159904235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb132a5c88bc53499cec877f45d9d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

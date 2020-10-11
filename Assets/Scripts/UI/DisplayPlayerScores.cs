@@ -5,6 +5,10 @@ using TMPro;
 
 public class DisplayPlayerScores : MonoBehaviour
 {
+    [Header("Players In Game SO")]
+    [SerializeField]
+    private PlayersInGame playersInGame;
+
     [Header("Players Score Displays")]
     [SerializeField]
     private GameObject displayP1;
@@ -39,11 +43,15 @@ public class DisplayPlayerScores : MonoBehaviour
         {
             item.SetActive(false);
         }
+        //This is to keep track of players added before this object was loaded
+        foreach (PlayerInput player in playersInGame.playerInputs)
+        {
+            OnPlayerJoined(player);
+        }
     }
 
     private void Start()
     {
-        //TODO: these should be on OnEnable
         ScoreManager.OnPlayerScoreUpdatedEvent += UpdatePlayerScore;
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
@@ -64,7 +72,6 @@ public class DisplayPlayerScores : MonoBehaviour
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         int playerID = playerInput.GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
-
         displaysList[playerID].SetActive(true);
     }
 
@@ -87,8 +94,6 @@ public class DisplayPlayerScores : MonoBehaviour
         {
             PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
             PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
-
         }
     }
-
 }

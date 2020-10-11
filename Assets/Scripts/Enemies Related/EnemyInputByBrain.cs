@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class EnemyInputByBrain : MonoBehaviour
 {
     [SerializeField]
+    private PlayersInGame playersInGameSO;
+
+    [SerializeField]
     private EnemyBrainSO brain;
     public Vector2 moveValue;
 
@@ -24,6 +27,12 @@ public class EnemyInputByBrain : MonoBehaviour
 
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
+
+        //This is to keep track of players added to the game before this object was loaded
+        foreach (PlayerInput player in playersInGameSO.playerInputs)
+        {
+            OnPlayerJoined(player);
+        }
     }
 
     void Update()
