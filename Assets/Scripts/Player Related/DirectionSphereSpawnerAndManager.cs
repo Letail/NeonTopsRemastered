@@ -21,7 +21,19 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
         directionSphere = dirSphereObject.GetComponent<DirectionSphere>();
         directionSphere.playerToFollow = GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
         directionSphereIsSet = true;
+        Debug.Log("Dir Sphere is " + GetPrefab());
     }
+
+    public GameObject GetPrefab()
+    {
+        //if (directionSphereIsSet) return dirSphereObject;
+        //else
+        //{
+        //    Debug.LogError("DirSphere not ready");
+        //    return null;
+        //}
+        return dirSphereObject;
+}
 
     public void OnLook(InputValue value)
     {

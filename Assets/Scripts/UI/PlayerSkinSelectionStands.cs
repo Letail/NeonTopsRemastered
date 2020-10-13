@@ -31,19 +31,9 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     {
         playerInputs.Add(playerInput);
 
-        //foreach (var item in playerInput.GetComponents(typeof(Component)))
-        //{
-        //    Debug.Log(item.GetType());
-        //}
-
-        playerInput.GetComponent<Rigidbody>().isKinematic = true;
-        playerInput.GetComponent<PlayerMovement>().enabled = false;
-
-        playerInput.transform.position = modelsPositions[playerInputs.IndexOf(playerInput)].transform.position;
-        playerInput.transform.localScale = Vector3.one;
         playerInput.GetComponent<PlayerShowcaseMode>().EnableShowcase();
 
-
+        playerInput.transform.position = modelsPositions[playerInputs.IndexOf(playerInput)].transform.position;
     }
 
     private void ActivateStand(PlayerInput playerInput)

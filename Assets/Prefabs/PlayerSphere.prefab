@@ -462,3 +462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3628b7b6137cd444aa86fca73b29cc64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 932306491335566236}
+  audioSource: {fileID: -5804322589059897336}
+  playerMovement: {fileID: 932306491335566238}
+  visualsPrefab: {fileID: -1852511000163121884}
+  directionSphere: {fileID: 7637197743002806158}
