@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ModelsSkinsList
   m_EditorClassIdentifier: 
   list:
-  - {fileID: 7814769281933543362, guid: 20e364291e884d64e922f11caecf8ee5, type: 3}
-  - {fileID: 924119457170121471, guid: 94682a72fd398654189c2f1d7e49a2e2, type: 3}
+  - {fileID: 4685392219092612723, guid: 99ccfa93e3234624095e5c49d9a13d83, type: 3}
+  - {fileID: 8662384590466540069, guid: ab53469f0c0e22647991641bcfe6eb6f, type: 3}

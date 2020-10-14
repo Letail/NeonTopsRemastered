@@ -26,9 +26,8 @@ public class HandleOnNavigateMessages : MonoBehaviour
     {
         navigateValue = value.Get<Vector2>();
         if (navigateValue.x > 0.5) navigateValue.x = 1; 
-        if (navigateValue.x < 0.5) navigateValue.x = 0;
-        if (navigateValue.y > 0.5) navigateValue.y = 1;
-        if (navigateValue.y < 0.5) navigateValue.y = 0;
+        else navigateValue.x = -1;
+        navigateValue.y = 0;
 
         if (playerId == -1)
         {

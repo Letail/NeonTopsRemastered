@@ -8,7 +8,8 @@ public class SkinHolder : MonoBehaviour
     private List<GameObject> spawnedSkinsList;
     private int skinsListSize;
     private int currentIndex;
-
+    private float coolDown = 1f;
+    private float lastTimeChanged = 0;
 
     private void Start()
     {
@@ -26,9 +27,13 @@ public class SkinHolder : MonoBehaviour
 
     public int ChangeDisplayedSkin(Vector2 navigation)
     {
-        if (navigation == Vector2.right) SwitchDisplay(IncreaseIndex());
-        else if (navigation == Vector2.left) SwitchDisplay(DecreaseIndex());
-
+        if(Time.time > lastTimeChanged + coolDown)
+        {
+            if (navigation == Vector2.right) SwitchDisplay(IncreaseIndex());
+            else if (navigation == Vector2.left) SwitchDisplay(DecreaseIndex());
+            lastTimeChanged = Time.time;
+        }
+        
         return currentIndex;
     }
 
