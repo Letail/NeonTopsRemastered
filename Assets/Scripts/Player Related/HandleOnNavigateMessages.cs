@@ -2,32 +2,34 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class OnPlayerPaused : MonoBehaviour
+public class HandleOnNavigateMessages : MonoBehaviour
 {
-    public delegate void OnPaused(int playerId);
-    public static event OnPaused OnPausedEvent;
+    public delegate void OnPlayerNavigate(int playerId, Vector2 navigateValue);
+    public static event OnPlayerNavigate OnPlayerNavigateEvent;
 
-    public bool isPaused;
     private int playerId;
+    private Vector2 navigateValue;
 
     public void Start()
     {
         playerId = -1;
         StartCoroutine(GetID());
     }
+
     IEnumerator GetID()
     {
         yield return new WaitWhile(() => GetComponent<PlayerPropertiesHolder>() != null);
         playerId = GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
     }
 
-    public void OnPause(InputValue value)
+    public void OnMove(InputValue value)
     {
-        isPaused = !isPaused;
+        navigateValue = value.Get<Vector2>();
         if (playerId == -1)
         {
             playerId = GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
         }
-        OnPausedEvent?.Invoke(playerId);
+        OnPlayerNavigateEvent?.Invoke(playerId, navigateValue);
+        Debug.Log("Navigate Message value = " + value);
     }
 }

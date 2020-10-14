@@ -5,24 +5,20 @@ public class PlayerShowcaseMode : MonoBehaviour
 {
     private bool isInShowcaseMode;
 
-    [SerializeField]
-    private Rigidbody rb;
-    [SerializeField]
-    private AudioSource audioSource;
-    [SerializeField]
-    private PlayerMovement playerMovement;
-    [SerializeField]
-    private SpawnCharacterVisualsPrefab visualsPrefab;
+    //[SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private SpawnCharacterVisualsPrefab visualsPrefab;
     private GameObject prefabGameObject;
-    [SerializeField]
-    private DirectionSphereSpawnerAndManager directionSphere;
+    [SerializeField] private DirectionSphereSpawnerAndManager directionSphere;
 
 
-    public void EnableShowcase()
+    public void EnableShowcase(bool hide)
     {
         if (!isInShowcaseMode)
         {
-            StartCoroutine(SafelyEnableShowcase());
+            StartCoroutine(SafelyEnableShowcase(hide));
         }
     }
 
@@ -32,7 +28,7 @@ public class PlayerShowcaseMode : MonoBehaviour
         else return false;
     }
 
-    private IEnumerator SafelyEnableShowcase()
+    private IEnumerator SafelyEnableShowcase(bool hide)
     {
         Debug.Log("Waiting for everything to initialize");
         yield return new WaitWhile(() => NothingIsNull());
@@ -44,6 +40,7 @@ public class PlayerShowcaseMode : MonoBehaviour
         prefabGameObject = visualsPrefab.GetPrefab();
         prefabGameObject.GetComponent<TrailRenderer>().enabled = false;
         prefabGameObject.GetComponent<Light>().enabled = false;
+        if (hide) prefabGameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
         directionSphere.GetPrefab().SetActive(false);
     }
 

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerSkinSelectionStands : MonoBehaviour
 {
-    [SerializeField]
-    private List<GameObject> stands;
-    [SerializeField]
-    private List<GameObject> modelsPositions;
+    [SerializeField] private List<GameObject> stands;
+    private List<SkinHolder> skinHolders;
+    [SerializeField] private List<GameObject> modelsPositions;
+    //[SerializeField] private List<GameObject> models;
+
 
     private List<PlayerInput> playerInputs;
 
@@ -18,12 +17,15 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private void Start()
     {
         playerInputs = new List<PlayerInput>();
-        foreach (var item in stands)
+        skinHolders = new List<SkinHolder>();
+        foreach (GameObject item in stands)
         {
             item.SetActive(false);
+            skinHolders.Add(item.GetComponent<SkinHolder>());
         }
         PlayerInputManager.instance.onPlayerJoined += ActivateStand;
         PlayerInputManager.instance.onPlayerJoined += TakeControlOfSpawnedPlayer;
+        HandleOnNavigateMessages.OnPlayerNavigateEvent += SwitchModel;
     }
 
 
@@ -31,16 +33,20 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     {
         playerInputs.Add(playerInput);
 
-        playerInput.GetComponent<PlayerShowcaseMode>().EnableShowcase();
+        playerInput.GetComponent<PlayerShowcaseMode>().EnableShowcase(hide: true);
+        //playerInput.transform.position = modelsPositions[playerInputs.IndexOf(playerInput)].transform.position;
+    }
 
-        playerInput.transform.position = modelsPositions[playerInputs.IndexOf(playerInput)].transform.position;
+    public void SwitchModel(int playerID, Vector2 navigation)
+    {
+        skinHolders[playerID].ChangeDisplayedSkin(navigation);
     }
 
     private void ActivateStand(PlayerInput playerInput)
     {
-        foreach (var item in stands)
+        foreach (GameObject item in stands)
         {
-            if(item.activeSelf == false)
+            if (item.activeSelf == false)
             {
                 item.SetActive(true);
                 return;
@@ -53,7 +59,6 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     {
         PlayerInputManager.instance.onPlayerJoined -= ActivateStand;
         PlayerInputManager.instance.onPlayerJoined -= TakeControlOfSpawnedPlayer;
+        HandleOnNavigateMessages.OnPlayerNavigateEvent -= SwitchModel;
     }
-
-
 }

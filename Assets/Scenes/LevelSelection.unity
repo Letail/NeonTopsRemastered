@@ -1888,6 +1888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 313144490}
+  - component: {fileID: 313144491}
   m_Layer: 0
   m_Name: SkinHolder_2
   m_TagString: Untagged
@@ -1915,6 +1916,19 @@ Transform:
   m_Father: {fileID: 1545408669}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313144491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313144489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73c558c98d494b4c971589702b0c88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
 --- !u!1 &335094516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,6 +2247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380703900}
+  - component: {fileID: 380703901}
   m_Layer: 0
   m_Name: SkinHolder_3
   m_TagString: Untagged
@@ -2260,6 +2275,19 @@ Transform:
   m_Father: {fileID: 1545408669}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &380703901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380703899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73c558c98d494b4c971589702b0c88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
 --- !u!1 &402400101
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,6 +12464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476690012}
+  - component: {fileID: 1476690013}
   m_Layer: 0
   m_Name: SkinHolder_4
   m_TagString: Untagged
@@ -12463,6 +12492,19 @@ Transform:
   m_Father: {fileID: 1545408669}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1476690013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476690011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73c558c98d494b4c971589702b0c88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
 --- !u!1 &1502355135
 GameObject:
   m_ObjectHideFlags: 0
@@ -15506,6 +15548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771484276}
+  - component: {fileID: 1771484277}
   m_Layer: 0
   m_Name: SkinHolder
   m_TagString: Untagged
@@ -15533,6 +15576,19 @@ Transform:
   m_Father: {fileID: 1545408669}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1771484277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771484275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73c558c98d494b4c971589702b0c88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
 --- !u!1 &1795285011
 GameObject:
   m_ObjectHideFlags: 0
