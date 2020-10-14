@@ -4,6 +4,7 @@ using UnityEngine;
 public class SkinHolder : MonoBehaviour
 {
     public GameObjectListSO skinsListSO;
+    [SerializeField] private float offsetY;
     private List<GameObject> spawnedSkinsList;
     private int skinsListSize;
     private int currentIndex;
@@ -17,6 +18,7 @@ public class SkinHolder : MonoBehaviour
         {
             GameObject spawnedSkin = Instantiate(item);
             spawnedSkin.transform.parent = transform;
+            spawnedSkin.transform.localPosition = new Vector3(0, offsetY, 0); 
             spawnedSkin.SetActive(false);
             spawnedSkinsList.Add(spawnedSkin);
         }

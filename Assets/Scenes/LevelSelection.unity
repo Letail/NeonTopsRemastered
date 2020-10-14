@@ -1929,6 +1929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
+  offsetY: 2
 --- !u!1 &335094516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
+  offsetY: 2
 --- !u!1 &402400101
 GameObject:
   m_ObjectHideFlags: 0
@@ -12505,6 +12507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
+  offsetY: 2
 --- !u!1 &1502355135
 GameObject:
   m_ObjectHideFlags: 0
@@ -15589,6 +15592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinsListSO: {fileID: 11400000, guid: 168d4bce01cd3eb42bf55fc7dad82c7b, type: 2}
+  offsetY: 2
 --- !u!1 &1795285011
 GameObject:
   m_ObjectHideFlags: 0

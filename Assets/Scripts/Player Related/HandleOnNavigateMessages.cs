@@ -25,11 +25,17 @@ public class HandleOnNavigateMessages : MonoBehaviour
     public void OnMove(InputValue value)
     {
         navigateValue = value.Get<Vector2>();
+        if (navigateValue.x > 0.5) navigateValue.x = 1; 
+        if (navigateValue.x < 0.5) navigateValue.x = 0;
+        if (navigateValue.y > 0.5) navigateValue.y = 1;
+        if (navigateValue.y < 0.5) navigateValue.y = 0;
+
         if (playerId == -1)
         {
             playerId = GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
         }
+
         OnPlayerNavigateEvent?.Invoke(playerId, navigateValue);
-        Debug.Log("Navigate Message value = " + value);
+        Debug.Log("Navigate Message value = " + navigateValue + "PlayerID : " + playerId);
     }
 }
