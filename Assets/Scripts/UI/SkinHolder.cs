@@ -8,8 +8,7 @@ public class SkinHolder : MonoBehaviour
     private List<GameObject> spawnedSkinsList;
     private int skinsListSize;
     private int currentIndex;
-    private float coolDown = 1f;
-    private float lastTimeChanged = 0;
+    private bool navigationHasReturnedToZeroOnce;
 
     private void Start()
     {
@@ -27,14 +26,24 @@ public class SkinHolder : MonoBehaviour
 
     public int ChangeDisplayedSkin(Vector2 navigation)
     {
-        if(Time.time > lastTimeChanged + coolDown)
+        //Doing all of this to keep an analogue stick from spamming inputs,
+        //one for each variation of a Vector2 they can produce.
+        if (navigationHasReturnedToZeroOnce)
         {
-            if (navigation == Vector2.right) SwitchDisplay(IncreaseIndex());
-            else if (navigation == Vector2.left) SwitchDisplay(DecreaseIndex());
-            lastTimeChanged = Time.time;
+            if (navigation.x < -0.5f) SwitchDisplay(IncreaseIndex());
+            else if (navigation.x > 0.5f) SwitchDisplay(DecreaseIndex());
+            navigationHasReturnedToZeroOnce = false;
         }
-        
+        navigationHasReturnedToZeroOnce = hasNavigationReturnedToZero(navigation);
+        //print("navHasReturnedToZeroOnce = " + navHasReturnedToZeroOnce);
+
         return currentIndex;
+    }
+
+    private bool hasNavigationReturnedToZero(Vector2 navigation)
+    {
+        if(navigation.x > -0.5f && navigation.x < 0.5f) return true;
+        return false;
     }
 
     private void SwitchDisplay(int index)
@@ -44,7 +53,7 @@ public class SkinHolder : MonoBehaviour
             item.SetActive(false);
         }
         spawnedSkinsList[index].SetActive(true);
-        Debug.Log("Activate skin of index" + index);
+        //Debug.Log("Activate skin of index " + index);
     }
 
     private int IncreaseIndex()
