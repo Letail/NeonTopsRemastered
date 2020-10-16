@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7608672052538027114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23676075, y: 1.2418, z: -0.14295751}
+  m_LocalPosition: {x: 0.23676075, y: 1.2418, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4992905355706795227}
@@ -405,6 +405,10 @@ PrefabInstance:
     - target: {fileID: 1158286440870419035, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
       propertyPath: m_Name
       value: AquaTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818815539545591578, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
       propertyPath: m_LocalPosition.x

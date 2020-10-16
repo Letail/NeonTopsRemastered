@@ -1895,7 +1895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &313144490
 Transform:
   m_ObjectHideFlags: 0
@@ -2255,7 +2255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &380703900
 Transform:
   m_ObjectHideFlags: 0
@@ -7303,7 +7303,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19394
+  m_Name: pb_Mesh19404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7537,7 +7537,6 @@ MonoBehaviour:
   m_Script: {fileID: 1863388974}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &929941379
 Transform:
   m_ObjectHideFlags: 19
@@ -12473,7 +12472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1476690012
 Transform:
   m_ObjectHideFlags: 0
@@ -14186,6 +14185,7 @@ GameObject:
   - component: {fileID: 1637022818}
   - component: {fileID: 1637022821}
   - component: {fileID: 1637022819}
+  - component: {fileID: 1637022820}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -14201,7 +14201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637022817}
   m_LocalRotation: {x: 0.3420201, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 8, z: -8}
+  m_LocalPosition: {x: 0, y: 20, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545408669}
@@ -14312,6 +14312,25 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!95 &1637022820
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637022817}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5733a7649aac4844b828a744b26c6e70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &1637022821
 Camera:
   m_ObjectHideFlags: 0
@@ -15558,7 +15577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1771484276
 Transform:
   m_ObjectHideFlags: 0

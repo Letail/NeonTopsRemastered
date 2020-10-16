@@ -9,9 +9,11 @@ public class SkinHolder : MonoBehaviour
     private int skinsListSize;
     private int currentIndex;
     private bool navigationHasReturnedToZeroOnce;
+    private bool firstUse;
 
     private void Start()
     {
+        firstUse = true;
         currentIndex = 0;
         spawnedSkinsList = new List<GameObject>();
         foreach (var item in skinsListSO.list)
@@ -22,10 +24,19 @@ public class SkinHolder : MonoBehaviour
             spawnedSkin.SetActive(false);
             spawnedSkinsList.Add(spawnedSkin);
         }
+        spawnedSkinsList[0].SetActive(true);
     }
 
     public int ChangeDisplayedSkin(Vector2 navigation)
     {
+        if(firstUse)
+        {
+            if (navigation.x < -0.5f) SwitchDisplay(IncreaseIndex());
+            else if (navigation.x > 0.5f) SwitchDisplay(DecreaseIndex());
+            navigationHasReturnedToZeroOnce = false;
+            firstUse = false;
+        }
+
         //Doing all of this to keep an analogue stick from spamming inputs,
         //one for each variation of a Vector2 they can produce.
         if (navigationHasReturnedToZeroOnce)
