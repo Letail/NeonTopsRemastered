@@ -25,9 +25,6 @@ public class HandleOnNavigateMessages : MonoBehaviour
     public void OnMove(InputValue value)
     {
         navigateValue = value.Get<Vector2>();
-        //if (navigateValue.x > 0.5) navigateValue.x = 1; 
-        //else navigateValue.x = -1;
-        //navigateValue.y = 0;
 
         if (playerId == -1)
         {
@@ -35,6 +32,6 @@ public class HandleOnNavigateMessages : MonoBehaviour
         }
 
         OnPlayerNavigateEvent?.Invoke(playerId, navigateValue);
-        Debug.Log("Navigate Message value = " + navigateValue + "PlayerID: " + playerId);
+        //Debug.Log("Navigate Message value = " + navigateValue + "PlayerID: " + playerId);
     }
 }
