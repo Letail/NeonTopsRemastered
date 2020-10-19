@@ -31,7 +31,7 @@ public class EnemyInputByBrain : MonoBehaviour
         //This is to keep track of players added to the game before this object was loaded
         foreach (PlayerInput player in playersInGameSO.playerInputs)
         {
-            OnPlayerJoined(player);
+            if(player != null) OnPlayerJoined(player);
         }
     }
 

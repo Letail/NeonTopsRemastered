@@ -46,7 +46,7 @@ public class DisplayPlayerScores : MonoBehaviour
         //This is to keep track of players added before this object was loaded
         foreach (PlayerInput player in playersInGame.playerInputs)
         {
-            OnPlayerJoined(player);
+            if(player != null) OnPlayerJoined(player);
         }
     }
 
