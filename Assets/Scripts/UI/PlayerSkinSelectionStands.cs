@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class PlayerSkinSelectionStands : MonoBehaviour
 {
@@ -35,9 +36,14 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private bool allHaveDifferentSkins;
     private bool quitCountDown;
 
+    private IEnumerator countDownCoroutine;
+    private IEnumerator test;
+
     private void Start()
     {
         allHaveDifferentSkins = false;
+        countDownCoroutine = CountDownStart(countDownTime);
+        test = CourotineTest();
 
         //Initializing Lists
         playersReadyState = new List<bool>();
@@ -111,12 +117,17 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private bool CheckIfEveryoneIsReady()
     {
-        bool everyOneIsReady = true;
+        quitCountDown = false;
         foreach (var item in playersReadyState)
         {
-            if (item == false) everyOneIsReady = false;
+            if (item == false)
+            {
+                quitCountDown = true; //If someone is not ready, cancel the countdown
+                return false; //if one player is not ready, then not every is ready
+            }
         }
-        return everyOneIsReady;
+        
+        return true;
     }
 
     private bool CheckIfAllHaveDifferentSkins()
@@ -160,25 +171,46 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private void FinishSkinSelection()
     {
-        StartCoroutine(CountDownStart(countDownTime));
+        print("FinishSkinSelection");
+        StopCoroutine(countDownCoroutine);
+        StartCoroutine(countDownCoroutine);
+
+        StopCoroutine(test);
+        StartCoroutine(test);
+
+
+    }
+
+
+    private IEnumerator CourotineTest()
+    {
+        while(true)
+        {
+            print("Time is: " + Time.time);
+            yield return null;
+        }
     }
 
     private IEnumerator CountDownStart(float waitTime)
     {
+        print("CountDownStart has started");
+
+        if(waitTime == 0) Debug.LogError("waitTime cannot be zero");
         countDownSlider.gameObject.SetActive(true);
         float counter = 0;
         while(counter < waitTime)
         {
             //Increment Timer until counter >= waitTime
             counter += Time.deltaTime;
-
             countDownSlider.value = counter / waitTime;
 
-            if (quitCountDown)
-            {
-                countDownSlider.gameObject.SetActive(false);
-                yield break;
-            }
+
+            //if (quitCountDown)
+            //{
+            //    print("quitcountdown = " + quitCountDown);
+            //    countDownSlider.gameObject.SetActive(false);
+            //    yield break;
+            //}
 
             yield return null;
         }
