@@ -5,6 +5,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerSkinSelectionStands : MonoBehaviour
 {
@@ -36,14 +37,11 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private bool allHaveDifferentSkins;
     private bool quitCountDown;
 
-    private IEnumerator countDownCoroutine;
-    private IEnumerator test;
+    private Coroutine countDownCoroutine;
 
     private void Start()
     {
         allHaveDifferentSkins = false;
-        countDownCoroutine = CountDownStart(countDownTime);
-        test = CourotineTest();
 
         //Initializing Lists
         playersReadyState = new List<bool>();
@@ -112,21 +110,20 @@ public class PlayerSkinSelectionStands : MonoBehaviour
             standsText[playerId].color = notReadyColor;
             standsText[playerId].text = string.Format(notReadyText, playerId + 1);
             playersReadyState[playerId] = false;
+            StopCountDown();
         }
     }
 
     private bool CheckIfEveryoneIsReady()
     {
-        quitCountDown = false;
         foreach (var item in playersReadyState)
         {
             if (item == false)
             {
-                quitCountDown = true; //If someone is not ready, cancel the countdown
-                return false; //if one player is not ready, then not every is ready
+                StopCountDown();
+                return false; //if one player is not ready, then not everyone is ready
             }
-        }
-        
+        }        
         return true;
     }
 
@@ -171,30 +168,18 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private void FinishSkinSelection()
     {
-        print("FinishSkinSelection");
-        StopCoroutine(countDownCoroutine);
-        StartCoroutine(countDownCoroutine);
-
-        StopCoroutine(test);
-        StartCoroutine(test);
-
-
+        if(countDownCoroutine != null) StopCoroutine(countDownCoroutine);
+        countDownCoroutine = StartCoroutine(CountDownStart(countDownTime));
     }
 
-
-    private IEnumerator CourotineTest()
+    private void StopCountDown()
     {
-        while(true)
-        {
-            print("Time is: " + Time.time);
-            yield return null;
-        }
+        if (countDownCoroutine != null) StopCoroutine(countDownCoroutine);
+        countDownSlider.gameObject.SetActive(false);
     }
 
     private IEnumerator CountDownStart(float waitTime)
     {
-        print("CountDownStart has started");
-
         if(waitTime == 0) Debug.LogError("waitTime cannot be zero");
         countDownSlider.gameObject.SetActive(true);
         float counter = 0;
@@ -204,17 +189,10 @@ public class PlayerSkinSelectionStands : MonoBehaviour
             counter += Time.deltaTime;
             countDownSlider.value = counter / waitTime;
 
-
-            //if (quitCountDown)
-            //{
-            //    print("quitcountdown = " + quitCountDown);
-            //    countDownSlider.gameObject.SetActive(false);
-            //    yield break;
-            //}
-
             yield return null;
         }
         countDownSlider.gameObject.SetActive(false);
+        SceneManager.LoadSceneAsync(1); //Load main multiplayer scene. TEMPORARY LOCATION FOR THIS CODE
     }
 
     private void OnDisable()
