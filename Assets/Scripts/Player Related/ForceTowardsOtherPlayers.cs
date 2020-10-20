@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +24,7 @@ public class ForceTowardsOtherPlayers : MonoBehaviour
     {
         foreach (Transform player in otherPlayers)
         {
-            if (Vector3.Distance(player.position, transform.position ) < radiusOfInfluence)
+            if (Vector3.Distance(player.position, transform.position) < radiusOfInfluence)
             {
                 dirToOtherPlayer = player.position - transform.position;
                 rb.AddForce(dirToOtherPlayer * forceAmount, ForceMode.Force);
@@ -51,8 +50,10 @@ public class ForceTowardsOtherPlayers : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
-        PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
-
+        if (PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+            PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
+        }
     }
 }
