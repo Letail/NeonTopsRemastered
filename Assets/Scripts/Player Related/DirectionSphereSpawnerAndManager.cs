@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 /// <summary>
 /// This is to be attached to the player prefab
@@ -21,7 +20,7 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
         directionSphere = dirSphereObject.GetComponent<DirectionSphere>();
         directionSphere.playerToFollow = GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
         directionSphereIsSet = true;
-        Debug.Log("Dir Sphere is " + GetPrefab());
+        //Debug.Log("Dir Sphere is " + GetPrefab());
     }
 
     public GameObject GetPrefab()
@@ -33,7 +32,7 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
         //    return null;
         //}
         return dirSphereObject;
-}
+    }
 
     public void OnLook(InputValue value)
     {

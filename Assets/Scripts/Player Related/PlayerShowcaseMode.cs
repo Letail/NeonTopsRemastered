@@ -12,6 +12,7 @@ public class PlayerShowcaseMode : MonoBehaviour
     [SerializeField] private SpawnCharacterVisualsPrefab visualsPrefab;
     private GameObject prefabGameObject;
     [SerializeField] private DirectionSphereSpawnerAndManager directionSphere;
+    private CollisionDetectionMode previousDetectionMode;
 
 
     public void EnableShowcase(bool hide)
@@ -30,10 +31,12 @@ public class PlayerShowcaseMode : MonoBehaviour
 
     private IEnumerator SafelyEnableShowcase(bool hide)
     {
-        Debug.Log("Waiting for everything to initialize");
+        //Debug.Log("SafelyEnableShowcase(): Waiting for everything to initialize");
         yield return new WaitWhile(() => NothingIsNull());
 
         isInShowcaseMode = true;
+        previousDetectionMode = rb.collisionDetectionMode; //Only doing this to hide warnings in the inspector
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative; //Only doing this to hide warnings in the inspector
         rb.isKinematic = true;
         playerMovement.enabled = false;
         audioSource.enabled = false;

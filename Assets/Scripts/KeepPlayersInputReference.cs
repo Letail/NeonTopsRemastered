@@ -35,7 +35,11 @@ public class KeepPlayersInputReference : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerInputManager.instance.onPlayerJoined -= AddPlayerInputToList;
-        PlayerInputManager.instance.onPlayerLeft -= RemovePlayerInputToList;
+        if (PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= AddPlayerInputToList;
+            PlayerInputManager.instance.onPlayerLeft -= RemovePlayerInputToList;
+        }
+        playersInGameSO.playerInputs.Clear();
     }
 }
