@@ -76,7 +76,10 @@ public class EnemyInputByBrain : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
-        PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
+        if (PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+            PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
+        }        
     }
 }

@@ -7,7 +7,7 @@
 [RequireComponent(typeof(InterpolatedTransform))]
 public class DirectionSphere : MonoBehaviour
 {
-    public GameObject playerToFollow;
+    public GameObject playerToFollow; // To be set by DirectionSphereSpawnerAndManager.cs
     [HideInInspector]
     public Vector2 directionVector;
     [SerializeField]

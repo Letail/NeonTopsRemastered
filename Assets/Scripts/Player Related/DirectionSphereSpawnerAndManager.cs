@@ -14,13 +14,17 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
 
     private Vector2 lookInput;
 
-    void Start()
+    //void Awake()
+    //{
+    //    SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += SpawnDirSphere;
+    //}
+
+    public void SpawnDirSphere(GameObject characterVisualsInstance)
     {
         dirSphereObject = Instantiate(directionSpherePrefab, this.transform.position, Quaternion.identity);
         directionSphere = dirSphereObject.GetComponent<DirectionSphere>();
-        directionSphere.playerToFollow = GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+        directionSphere.playerToFollow = characterVisualsInstance;
         directionSphereIsSet = true;
-        //Debug.Log("Dir Sphere is " + GetPrefab());
     }
 
     public GameObject GetPrefab()
@@ -41,6 +45,5 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
             lookInput = value.Get<Vector2>().normalized;
             directionSphere.directionVector = lookInput;
         }
-
     }
 }

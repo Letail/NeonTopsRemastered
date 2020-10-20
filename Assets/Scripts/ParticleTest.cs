@@ -11,6 +11,7 @@ public class ParticleTest : MonoBehaviour
     private void Start()
     {
         particleObject = Instantiate(particlePrefab, Vector3.zero, Quaternion.identity);
+        particleObject.name = gameObject.name + "'s " + particleObject.name;
         particle = particleObject.GetComponent<ParticleSystem>();
         particle.Stop(true);
     }

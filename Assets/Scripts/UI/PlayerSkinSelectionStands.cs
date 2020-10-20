@@ -27,6 +27,8 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private List<SkinHolder> skinHolders;
     [SerializeField] private List<GameObject> modelsPositions;
 
+    [Header("Scenes Indexes")]
+    [SerializeField] private int multiplayerSceneIndex;
 
     private List<bool> playersReadyState;
     private List<int> playersSkinChosenIndex;
@@ -192,13 +194,16 @@ public class PlayerSkinSelectionStands : MonoBehaviour
             yield return null;
         }
         countDownSlider.gameObject.SetActive(false);
-        SceneManager.LoadSceneAsync(1); //Load main multiplayer scene. TEMPORARY LOCATION FOR THIS CODE
+        SceneManager.LoadSceneAsync(multiplayerSceneIndex); //Load main multiplayer scene. TEMPORARY LOCATION FOR THIS CODE
     }
 
     private void OnDisable()
     {
-        PlayerInputManager.instance.onPlayerJoined -= ActivateStand;
-        PlayerInputManager.instance.onPlayerJoined -= TakeControlOfSpawnedPlayer;
+        if(PlayerInputManager.instance != null)
+        {
+            PlayerInputManager.instance.onPlayerJoined -= ActivateStand;
+            PlayerInputManager.instance.onPlayerJoined -= TakeControlOfSpawnedPlayer;
+        }
         HandleOnNavigateMessages.OnPlayerNavigateEvent -= SwitchModel;
     }
 }
