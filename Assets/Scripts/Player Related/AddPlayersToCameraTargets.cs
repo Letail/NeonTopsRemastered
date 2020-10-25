@@ -22,11 +22,11 @@ public class AddPlayersToCameraTargets : MonoBehaviour
         //This method should only call GetPrefab(), never Spawn.
         if(SpawnPlayerOnJoined)
         {
-            visualsPrefab = playerInput.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().Spawn();
+            visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().Spawn();
         }
         else
         {
-            visualsPrefab = playerInput.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+            visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
         }
 
         
@@ -39,7 +39,7 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        visualsPrefab = playerInput.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+        visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
         targets.Remove(visualsPrefab);
         cameraMultiTarget.SetTargets(targets.ToArray());
     }

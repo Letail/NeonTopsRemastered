@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInputManager))]
@@ -28,7 +26,6 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
 
     private void Start()
     {
-        //TODO: Move the event subscription from here to OnEnable, once the race condition is solved.
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
     }
@@ -39,32 +36,32 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
         {
             //Debug.Log("Player Properties 1 added!");
 
-            playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties1;
+            playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties1;
             isPlayerActive1 = true;
         }
         else if (isPlayerActive2 == false)
         {
             //Debug.Log("Player Properties 2 added!");
-            playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties2;
+            playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties2;
             isPlayerActive2 = true;
         }
         else if (isPlayerActive3 == false)
         {
             //Debug.Log("Player Properties 3 added!");
-            playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties3;
+            playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties3;
             isPlayerActive3 = true;
         }
         else if (isPlayerActive4 == false)
         {
             //Debug.Log("Player Properties 4 added!");
-            playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties = playerProperties4;
+            playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties4;
             isPlayerActive4 = true;
         }
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
     {
-        int playerID = playerInput.gameObject.GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
+        int playerID = playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties.playerID;
 
         if (playerID == 1)
         {
@@ -82,11 +79,6 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
         {
             isPlayerActive4 = false;
         }
-    }
-
-    private void OnEnable()
-    {
-        //TODO: Move the event subscription from Start to here, once the race condition is solved.
     }
 
     private void OnDisable()
