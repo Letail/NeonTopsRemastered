@@ -14,14 +14,10 @@ public class DirectionSphereSpawnerAndManager : MonoBehaviour
 
     private Vector2 lookInput;
 
-    //void Awake()
-    //{
-    //    SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += SpawnDirSphere;
-    //}
-
     public void SpawnDirSphere(GameObject characterVisualsInstance)
     {
-        dirSphereObject = Instantiate(directionSpherePrefab, this.transform.position, Quaternion.identity);
+        //This prefab instance will be a child of the "Player Holder Prefab"
+        dirSphereObject = Instantiate(directionSpherePrefab, this.transform.position, Quaternion.identity, transform.parent);
         directionSphere = dirSphereObject.GetComponent<DirectionSphere>();
         directionSphere.playerToFollow = characterVisualsInstance;
         directionSphereIsSet = true;

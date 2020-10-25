@@ -13,7 +13,8 @@ public class SpawnCharacterVisualsPrefab : MonoBehaviour
 
     public GameObject Spawn()
     {
-        prefabInstance = Instantiate(characterVisualsPrefab);
+        //This prefab instance will be a child of the "Player Holder Prefab"
+        prefabInstance = Instantiate(characterVisualsPrefab, transform.parent);
         prefabInstance.GetComponent<CharacterVisualObject>().objectToFollow = this.gameObject;
 
         if(alsoSpawnDirSphere)
