@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7929000287873069343}
   - component: {fileID: -3670026088933932851}
   - component: {fileID: 4340383676033485836}
+  - component: {fileID: -5025790550223482064}
   m_Layer: 0
   m_Name: Player Holder Prefab
   m_TagString: Untagged
@@ -116,6 +117,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ee14ce2f7300c4a9e5adeefcf0cbf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5025790550223482064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416653993740010619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2823967ddb7004fa60a91a36b5c6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1001 &6180690865999632893
 PrefabInstance:
   m_ObjectHideFlags: 0

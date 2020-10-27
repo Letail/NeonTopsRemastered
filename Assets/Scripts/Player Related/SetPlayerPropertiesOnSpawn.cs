@@ -4,14 +4,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInputManager))]
 public class SetPlayerPropertiesOnSpawn : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerProperties playerProperties1;
-    [SerializeField]
-    private PlayerProperties playerProperties2;
-    [SerializeField]
-    private PlayerProperties playerProperties3;
-    [SerializeField]
-    private PlayerProperties playerProperties4;
+    [SerializeField] private PlayerProperties playerProperties1;
+    [SerializeField] private PlayerProperties playerProperties2;
+    [SerializeField] private PlayerProperties playerProperties3;
+    [SerializeField] private PlayerProperties playerProperties4;
 
     private bool isPlayerActive1;
     private bool isPlayerActive2;
@@ -35,6 +31,7 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
         if (isPlayerActive1 == false)
         {
             //Debug.Log("Player Properties 1 added!");
+            Debug.Log(playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>());
 
             playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties1;
             isPlayerActive1 = true;
@@ -42,6 +39,8 @@ public class SetPlayerPropertiesOnSpawn : MonoBehaviour
         else if (isPlayerActive2 == false)
         {
             //Debug.Log("Player Properties 2 added!");
+            Debug.Log(playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>());
+
             playerInput.gameObject.GetComponentInChildren<PlayerPropertiesHolder>().playerProperties = playerProperties2;
             isPlayerActive2 = true;
         }

@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 932306491335566238}
   - component: {fileID: 932306491335566233}
   - component: {fileID: 3049437510660258616}
-  - component: {fileID: 8793480354529107523}
   - component: {fileID: -1852511000163121884}
   - component: {fileID: 7637197743002806158}
   - component: {fileID: 6308565187812886484}
@@ -26,7 +25,6 @@ GameObject:
   - component: {fileID: 5502251746431648082}
   - component: {fileID: -8706819926655066528}
   - component: {fileID: 287324434191938728}
-  - component: {fileID: 6539074675451122255}
   - component: {fileID: 3781417373621565427}
   m_Layer: 0
   m_Name: PlayerSphere
@@ -274,19 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bab7420794e52c428701ddaf2b01265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8793480354529107523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932306491335566231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf291b18a5fbe14ca214d69ebbbfc46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerProperties: {fileID: 0}
 --- !u!114 &-1852511000163121884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,19 +380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceAmount: 200
   radiusOfInfluence: 0.3
---- !u!114 &6539074675451122255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932306491335566231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2823967ddb7004fa60a91a36b5c6e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPaused: 0
 --- !u!114 &3781417373621565427
 MonoBehaviour:
   m_ObjectHideFlags: 0
