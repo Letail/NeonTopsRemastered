@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d0cdc6255754db322573f4eb94e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnOnAwake: 0
   alsoSpawnDirSphere: 0
   directionSphereSpawnerAndManager: {fileID: 0}
   characterVisualsPrefab: {fileID: 1664531012608556592, guid: 4d3a29b8db65ddd46bfcb9ef07162a62, type: 3}

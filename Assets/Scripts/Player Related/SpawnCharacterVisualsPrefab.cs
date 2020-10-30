@@ -5,11 +5,17 @@ public class SpawnCharacterVisualsPrefab : MonoBehaviour
     public delegate void OnVisualsSpawned(GameObject instance);
     public static event OnVisualsSpawned OnVisualsSpawnedEvent;
 
+    [SerializeField] private bool spawnOnAwake;
     [SerializeField] private bool alsoSpawnDirSphere;
     [SerializeField] private DirectionSphereSpawnerAndManager directionSphereSpawnerAndManager;
 
     [SerializeField] private GameObject characterVisualsPrefab;
     private GameObject prefabInstance;
+
+    private void Awake()
+    {
+        if (spawnOnAwake) Spawn();
+    }
 
     public GameObject Spawn()
     {
@@ -21,6 +27,9 @@ public class SpawnCharacterVisualsPrefab : MonoBehaviour
         {
             directionSphereSpawnerAndManager.SpawnDirSphere(prefabInstance);
         }
+
+        OnVisualsSpawnedEvent?.Invoke(prefabInstance);
+
         return prefabInstance;
     }
 

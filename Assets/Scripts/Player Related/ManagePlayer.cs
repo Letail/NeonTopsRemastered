@@ -1,15 +1,26 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class ManagePlayer : MonoBehaviour
 {
+    [SerializeField] private Vector3 startingPosition;
+    public AddPlayerToPlayersInGameSO addPlayerToPlayersInGameSO;
 
-    [ContextMenuItem("Enable", "EnableAllChildren")]
-    public bool enableThem;
+    [ContextMenu("EnableAllChildren")]
     private void EnableAllChildren()
     {
-        foreach (Transform child in transform)
+        if (EditorApplication.isPlaying)
         {
-            child.gameObject.SetActive(true);
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+                if (child.GetComponent<PlayerMovement>() != null) 
+                    addPlayerToPlayersInGameSO.AddPlayerSphereTransform(child.transform);
+            }
+            foreach (Transform child in transform)
+            {
+                child.gameObject.transform.position = startingPosition;
+            }
         }
     }
 }

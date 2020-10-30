@@ -9,32 +9,28 @@ public class AddPlayersToCameraTargets : MonoBehaviour
     private GameObject visualsPrefab;
 
     [Header("Testing Only")]
-    public bool SpawnPlayerOnJoined;
+    public bool SpawnPlayerWhenTheyJoin;
 
     void Awake()
     {
         targets = new List<GameObject>();
     }
 
-    public void OnPlayerJoined(PlayerInput playerInput)
-    {
-        //This if is for testin only.
-        //This method should only call GetPrefab(), never Spawn.
-        if(SpawnPlayerOnJoined)
-        {
-            visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().Spawn();
-        }
-        else
-        {
-            visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
-        }
+    //public void OnPlayerJoined(PlayerInput playerInput)
+    //{
+    //    visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
+       
+    //    if (visualsPrefab != null)
+    //    {
+    //        targets.Add(visualsPrefab);
+    //        cameraMultiTarget.SetTargets(targets.ToArray());
+    //    }        
+    //}
 
-        
-        if (visualsPrefab != null)
-        {
-            targets.Add(visualsPrefab);
-            cameraMultiTarget.SetTargets(targets.ToArray());
-        }        
+    public void AddVisualsPrefab(GameObject instance)
+    {
+        targets.Add(instance);
+        cameraMultiTarget.SetTargets(targets.ToArray());
     }
 
     public void OnPlayerLeft(PlayerInput playerInput)
@@ -46,7 +42,8 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
+        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += AddVisualsPrefab;
+        //PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
         PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
     }
 
@@ -54,8 +51,9 @@ public class AddPlayersToCameraTargets : MonoBehaviour
     {
         if (PlayerInputManager.instance != null)
         {
-            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+            //PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
             PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
         }
+        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent -= AddVisualsPrefab;
     }
 }
