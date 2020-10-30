@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 8181776618897352183}
   - component: {fileID: 8181776618897352177}
   - component: {fileID: 8181776618897352176}
-  - component: {fileID: 7583948324790804892}
+  - component: {fileID: 130397185}
   m_Layer: 0
   m_Name: CameraMultitarget
   m_TagString: Untagged
@@ -349,7 +349,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8181776618897352182}
-  m_LocalRotation: {x: 0.35959467, y: -0, z: -0, w: 0.9331086}
+  m_LocalRotation: {x: 0.35959783, y: 0, z: 0, w: 0.9331074}
   m_LocalPosition: {x: 0.02, y: 2.43, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9e2f430a95a1840860bec963125287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7583948324790804892
+--- !u!114 &130397185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8181776618897352182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30a2b82e66633cf4992541ebc5d3cd79, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a3cdf14fd86b32448f2b53edeb7b84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playersInGameSO: {fileID: 11400000, guid: c76c9a84e8698ac4cb53f4661d7b140d, type: 2}

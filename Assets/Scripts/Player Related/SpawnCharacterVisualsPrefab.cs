@@ -9,6 +9,8 @@ public class SpawnCharacterVisualsPrefab : MonoBehaviour
     [SerializeField] private bool alsoSpawnDirSphere;
     [SerializeField] private DirectionSphereSpawnerAndManager directionSphereSpawnerAndManager;
 
+    [SerializeField] private PlayersInGame playersInGameSO;
+
     [SerializeField] private GameObject characterVisualsPrefab;
     private GameObject prefabInstance;
 
@@ -27,6 +29,8 @@ public class SpawnCharacterVisualsPrefab : MonoBehaviour
         {
             directionSphereSpawnerAndManager.SpawnDirSphere(prefabInstance);
         }
+
+        playersInGameSO.playerVisualsGO.Add(prefabInstance);
 
         OnVisualsSpawnedEvent?.Invoke(prefabInstance);
 

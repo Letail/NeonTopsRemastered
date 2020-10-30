@@ -13,9 +13,9 @@ public class ManagePlayer : MonoBehaviour
         {
             foreach (Transform child in transform)
             {
-                child.gameObject.SetActive(true);
                 if (child.GetComponent<PlayerMovement>() != null) 
                     addPlayerToPlayersInGameSO.AddPlayerSphereTransform(child.transform);
+                child.gameObject.SetActive(true);
             }
             foreach (Transform child in transform)
             {

@@ -43,11 +43,15 @@ public class DisplayPlayerScores : MonoBehaviour
         {
             item.SetActive(false);
         }
-        //This is to keep track of players added before this object was loaded
-        foreach (PlayerInput player in playersInGame.playerInputs)
+
+        if(playersInGame.playerInputs != null)
         {
-            if(player != null) OnPlayerJoined(player);
-        }
+            //This is to keep track of players added before this object was loaded
+            foreach (PlayerInput player in playersInGame.playerInputs)
+            {
+                if (player != null) OnPlayerJoined(player);
+            }
+        }        
     }
 
     private void Start()
@@ -81,12 +85,6 @@ public class DisplayPlayerScores : MonoBehaviour
         displaysList[playerID].SetActive(false);
     }
 
-
-    private void OnEnable()
-    {
-
-
-    }
     private void OnDisable()
     {
         ScoreManager.OnPlayerScoreUpdatedEvent -= UpdatePlayerScore;

@@ -7,4 +7,5 @@ public class PlayersInGame : ScriptableObject
 {
     public List<PlayerInput> playerInputs;
     public List<Transform> playerSphereTransforms;
+    public List<GameObject> playerVisualsGO;
 }

@@ -287,6 +287,7 @@ MonoBehaviour:
   spawnOnAwake: 1
   alsoSpawnDirSphere: 1
   directionSphereSpawnerAndManager: {fileID: 7637197743002806158}
+  playersInGameSO: {fileID: 11400000, guid: c76c9a84e8698ac4cb53f4661d7b140d, type: 2}
   characterVisualsPrefab: {fileID: 7608672052538027114, guid: d9af59061ef41ce438630bd16a0e9ad5, type: 3}
 --- !u!114 &7637197743002806158
 MonoBehaviour:

@@ -1,59 +1,75 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class AddPlayersToCameraTargets : MonoBehaviour
 {
-    public CameraMultiTarget cameraMultiTarget;
-    List<GameObject> targets;
+    [SerializeField] private PlayersInGame playersInGameSO; //The list of the existing players
+    private CameraMultiTarget cameraMultiTarget;
     private GameObject visualsPrefab;
 
-    [Header("Testing Only")]
-    public bool SpawnPlayerWhenTheyJoin;
-
-    void Awake()
+    private void Start()
     {
-        targets = new List<GameObject>();
+        cameraMultiTarget = GetComponent<CameraMultiTarget>();
+
+        if (playersInGameSO.playerVisualsGO != null)
+        {
+            UpdateCamTargetArray();
+        }
     }
 
-    //public void OnPlayerJoined(PlayerInput playerInput)
-    //{
-    //    visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
-       
-    //    if (visualsPrefab != null)
-    //    {
-    //        targets.Add(visualsPrefab);
-    //        cameraMultiTarget.SetTargets(targets.ToArray());
-    //    }        
-    //}
-
-    public void AddVisualsPrefab(GameObject instance)
+    public void UpdateCameraTargetsArray(GameObject instance)
     {
-        targets.Add(instance);
-        cameraMultiTarget.SetTargets(targets.ToArray());
+        UpdateCamTargetArray();
     }
 
-    public void OnPlayerLeft(PlayerInput playerInput)
+    private void UpdateCamTargetArray()
     {
-        visualsPrefab = playerInput.gameObject.GetComponentInChildren<SpawnCharacterVisualsPrefab>().GetPrefab();
-        targets.Remove(visualsPrefab);
-        cameraMultiTarget.SetTargets(targets.ToArray());
+        cameraMultiTarget.SetTargets(playersInGameSO.playerVisualsGO.ToArray());
     }
 
     private void OnEnable()
     {
-        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += AddVisualsPrefab;
-        //PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
-        PlayerInputManager.instance.onPlayerLeft += OnPlayerLeft;
+        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += UpdateCameraTargetsArray;
     }
 
     private void OnDisable()
     {
-        if (PlayerInputManager.instance != null)
-        {
-            //PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
-            PlayerInputManager.instance.onPlayerLeft -= OnPlayerLeft;
-        }
-        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent -= AddVisualsPrefab;
+        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent -= UpdateCameraTargetsArray;
     }
+    //private void AddExistingPlayersToCameraTargets()
+    //{
+    //    if (playersInGameSO.playerSphereTransforms != null)
+    //    {
+    //        GameObject[] alreadyExistingTargets = cameraMultiTarget.GetTargets();
+    //        if (alreadyExistingTargets.Length != 0)
+    //        {
+    //            foreach (Transform sphereTrans in playersInGameSO.playerSphereTransforms)
+    //            {
+    //                if (sphereTrans == null) continue;
+
+    //                visualsPrefab = sphereTrans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+
+    //                //Checking if the visualsPrefab is in the array
+    //                if (Array.Exists(alreadyExistingTargets, x => x == visualsPrefab))
+    //                {
+    //                    targets.Add(visualsPrefab);
+    //                }
+    //            }
+    //            cameraMultiTarget.SetTargets(targets.ToArray());
+    //        }
+    //        else
+    //        {
+    //            //If the camera doesn't have any targets yet, we don't need to check for duplicates,
+    //            //and can directly pass all the targets
+    //            foreach (Transform sphereTrans in playersInGameSO.playerSphereTransforms)
+    //            {
+    //                if (sphereTrans == null) continue;
+
+    //                visualsPrefab = sphereTrans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+    //                targets.Add(visualsPrefab);
+    //            }
+    //            cameraMultiTarget.SetTargets(targets.ToArray());
+    //        }
+    //    }
+    //}
 }

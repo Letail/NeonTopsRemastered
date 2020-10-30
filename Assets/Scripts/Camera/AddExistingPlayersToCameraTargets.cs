@@ -17,16 +17,16 @@ public class AddExistingPlayersToCameraTargets : MonoBehaviour
         cameraMultiTarget = GetComponent<CameraMultiTarget>();
         targets = new List<GameObject>();
 
-        if (playersInGameSO.playerInputs != null)
+        if (playersInGameSO.playerSphereTransforms != null)
         {
             GameObject[] alreadyExistingTargets = cameraMultiTarget.GetTargets();
             if (alreadyExistingTargets.Length != 0)
             {
-                foreach (PlayerInput item in playersInGameSO.playerInputs)
+                foreach (Transform sphereTrans in playersInGameSO.playerSphereTransforms)
                 {
-                    if (item == null) continue;
+                    if (sphereTrans == null) continue;
 
-                    visualsPrefab = item.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+                    visualsPrefab = sphereTrans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
 
                     //Checking if the visualsPrefab is in the array
                     if (Array.Exists(alreadyExistingTargets, x => x == visualsPrefab))
@@ -40,11 +40,11 @@ public class AddExistingPlayersToCameraTargets : MonoBehaviour
             {
                 //If the camera doesn't have any targets yet, we don't need to check for duplicates,
                 //and can directly pass all the targets
-                foreach (PlayerInput item in playersInGameSO.playerInputs)
+                foreach (Transform sphereTrans in playersInGameSO.playerSphereTransforms)
                 {
-                    if (item == null) continue;
+                    if (sphereTrans == null) continue;
 
-                    visualsPrefab = item.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
+                    visualsPrefab = sphereTrans.gameObject.GetComponent<SpawnCharacterVisualsPrefab>().GetPrefab();
                     targets.Add(visualsPrefab);
                 }
                 cameraMultiTarget.SetTargets(targets.ToArray());
