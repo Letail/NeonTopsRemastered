@@ -6,14 +6,10 @@ public class ScoreManager : MonoBehaviour
     public delegate void OnPlayerScoreUpdated(int playerID, int score);
     public static event OnPlayerScoreUpdated OnPlayerScoreUpdatedEvent;
 
-    [SerializeField]
-    private PlayerProperties playerProperties1;
-    [SerializeField]
-    private PlayerProperties playerProperties2;
-    [SerializeField]
-    private PlayerProperties playerProperties3;
-    [SerializeField]
-    private PlayerProperties playerProperties4;
+    [SerializeField] private PlayerProperties playerProperties1;
+    [SerializeField] private PlayerProperties playerProperties2;
+    [SerializeField] private PlayerProperties playerProperties3;
+    [SerializeField] private PlayerProperties playerProperties4;
     private List<PlayerProperties> playersPropertiesList;
 
     private Transform playerTrans1;
