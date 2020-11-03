@@ -7,12 +7,7 @@ public class PlayerInOutOfArenaTrigger : MonoBehaviour
 {
     [SerializeField] private PlayersInGame playersInGameSO;
 
-    //public delegate void OnPlayerOutOfArena(Transform trans);
-    //public static event OnPlayerOutOfArena OnPlayerOutOfArenaEvent;
     public static event EventHandler<Transform> PlayerLeftArenaEvent;
-
-    //public delegate void OnPlayerInArena(Transform trans);
-    //public static event OnPlayerInArena OnPlayerInArenaEvent;
     public static event EventHandler<Transform> PlayerEnteredArenaEvent;
 
     private void OnTriggerEnter(Collider other)
@@ -23,7 +18,6 @@ public class PlayerInOutOfArenaTrigger : MonoBehaviour
             {
                 if (other.transform == item)
                 {
-                    //OnPlayerInArenaEvent?.Invoke(other.transform);
                     PlayerEnteredArenaEvent?.Invoke(this, other.transform);
                 }
             }
@@ -38,7 +32,6 @@ public class PlayerInOutOfArenaTrigger : MonoBehaviour
             {
                 if (other.transform == item)
                 {
-                    //OnPlayerOutOfArenaEvent?.Invoke(other.transform);
                     PlayerLeftArenaEvent?.Invoke(this, other.transform);
                 }
             }

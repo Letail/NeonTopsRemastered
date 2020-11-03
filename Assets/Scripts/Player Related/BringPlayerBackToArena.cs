@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class BringPlayerBackToArena : MonoBehaviour
@@ -8,7 +7,6 @@ public class BringPlayerBackToArena : MonoBehaviour
     private float delay;
 
     public Vector3 arenaBringBackPosition;
-
 
     public void BringBack(object sender, Transform trans)
     {
@@ -21,7 +19,7 @@ public class BringPlayerBackToArena : MonoBehaviour
         Rigidbody rb = trans.gameObject.GetComponent<Rigidbody>();
 
 #if UNITY_EDITOR
-        //If before setting the rb to kinematic its collision detection isn't set to "ContinuousSpeculative",
+        //If, before setting the rb to kinematic, its collision detection isn't set to "ContinuousSpeculative",
         //then Unity will throw a warning and clog the console, so we're just avoiding this here.
         CollisionDetectionMode previousMode = rb.collisionDetectionMode;
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
@@ -30,7 +28,6 @@ public class BringPlayerBackToArena : MonoBehaviour
         rb.isKinematic = true;
 
         yield return new WaitForSeconds(timeDelay);
-        //OnPlayerBackOnArenaEvent?.Invoke(trans);
 
 
         rb.isKinematic = false;
