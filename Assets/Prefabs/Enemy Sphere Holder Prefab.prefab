@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5991738157107837130}
   - component: {fileID: 5991738157107837131}
   - component: {fileID: 5991738157107837120}
-  - component: {fileID: 5991738157107837123}
   - component: {fileID: 5991738157107837128}
   - component: {fileID: 5991738157107837129}
   - component: {fileID: 5991738157107837134}
@@ -24,7 +23,7 @@ GameObject:
   - component: {fileID: 5991738157107837122}
   - component: {fileID: 5991738157107837141}
   m_Layer: 0
-  m_Name: EnemieSphere
+  m_Name: EnemySphere
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -102,26 +101,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5991738157107837121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c17d0cdc6255754db322573f4eb94e4, type: 3}
+  m_Script: {fileID: 11500000, guid: c7c6e62e3a1bbf247a82e6250864c4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOnAwake: 0
-  alsoSpawnDirSphere: 0
-  directionSphereSpawnerAndManager: {fileID: 0}
-  characterVisualsPrefab: {fileID: 1664531012608556592, guid: 4d3a29b8db65ddd46bfcb9ef07162a62, type: 3}
---- !u!114 &5991738157107837123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5991738157107837121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b745419daf14d4948a2881378f274876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnCharacterVisualsPrefab: {fileID: 5991738157107837120}
+  spawnOnAwake: 1
+  bodyPrefab: {fileID: 1664531012608556592, guid: 4d3a29b8db65ddd46bfcb9ef07162a62, type: 3}
 --- !u!82 &5991738157107837128
 AudioSource:
   m_ObjectHideFlags: 0
@@ -365,7 +349,7 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy Sphere Holder Prefab
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

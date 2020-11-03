@@ -17,7 +17,7 @@ public class AddPlayersToCameraTargets : MonoBehaviour
         }
     }
 
-    public void UpdateCameraTargetsArray(GameObject instance)
+    public void UpdateCameraTargetsArray(object sender, GameObject instance)
     {
         UpdateCamTargetArray();
     }
@@ -29,12 +29,12 @@ public class AddPlayersToCameraTargets : MonoBehaviour
 
     private void OnEnable()
     {
-        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent += UpdateCameraTargetsArray;
+        SpawnCharacterVisualsPrefab.VisualsSpawnedEvent += UpdateCameraTargetsArray;
     }
 
     private void OnDisable()
     {
-        SpawnCharacterVisualsPrefab.OnVisualsSpawnedEvent -= UpdateCameraTargetsArray;
+        SpawnCharacterVisualsPrefab.VisualsSpawnedEvent -= UpdateCameraTargetsArray;
     }
     //private void AddExistingPlayersToCameraTargets()
     //{

@@ -393,10 +393,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AquaTop
       objectReference: {fileID: 0}
-    - target: {fileID: 1818815539545591578, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00011641
@@ -441,20 +437,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.057888832
-      objectReference: {fileID: 0}
-    - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.057888832
-      objectReference: {fileID: 0}
-    - target: {fileID: 6169593099738982967, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.057888832
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8522159070606622548, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878c81e586504bf4a8679f46d9655bed, type: 3}
 --- !u!4 &4992905355706795227 stripped
 Transform:

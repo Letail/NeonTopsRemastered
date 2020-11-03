@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: -5804322589059897336}
   - component: {fileID: 932306491335566238}
   - component: {fileID: 932306491335566233}
-  - component: {fileID: 3049437510660258616}
-  - component: {fileID: -1852511000163121884}
   - component: {fileID: 7637197743002806158}
   - component: {fileID: 6308565187812886484}
   - component: {fileID: -1888391924792648940}
@@ -26,13 +24,14 @@ GameObject:
   - component: {fileID: -8706819926655066528}
   - component: {fileID: 287324434191938728}
   - component: {fileID: 3781417373621565427}
+  - component: {fileID: 5122944312548724861}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &932306491335566227
 Transform:
   m_ObjectHideFlags: 0
@@ -260,35 +259,6 @@ MonoBehaviour:
   bounceForce: 6
   verticalBounceForce: 150
   groundLayer: 9
---- !u!114 &3049437510660258616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932306491335566231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bab7420794e52c428701ddaf2b01265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-1852511000163121884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932306491335566231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c17d0cdc6255754db322573f4eb94e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnOnAwake: 1
-  alsoSpawnDirSphere: 1
-  directionSphereSpawnerAndManager: {fileID: 7637197743002806158}
-  playersInGameSO: {fileID: 11400000, guid: c76c9a84e8698ac4cb53f4661d7b140d, type: 2}
-  characterVisualsPrefab: {fileID: 7608672052538027114, guid: d9af59061ef41ce438630bd16a0e9ad5, type: 3}
 --- !u!114 &7637197743002806158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,5 +367,22 @@ MonoBehaviour:
   rb: {fileID: 932306491335566236}
   audioSource: {fileID: -5804322589059897336}
   playerMovement: {fileID: 932306491335566238}
-  visualsPrefab: {fileID: -1852511000163121884}
+  visualsPrefab: {fileID: 0}
   directionSphere: {fileID: 7637197743002806158}
+--- !u!114 &5122944312548724861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932306491335566231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088391cfce7311145a5cbd42a1942f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOnAwake: 1
+  bodyPrefab: {fileID: 7608672052538027114, guid: d9af59061ef41ce438630bd16a0e9ad5, type: 3}
+  playersInGameSO: {fileID: 11400000, guid: c76c9a84e8698ac4cb53f4661d7b140d, type: 2}
+  alsoSpawnDirSphere: 1
+  directionSphereSpawnerAndManager: {fileID: 7637197743002806158}
