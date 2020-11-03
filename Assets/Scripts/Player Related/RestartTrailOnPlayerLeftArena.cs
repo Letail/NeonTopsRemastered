@@ -1,12 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RestartTrailOnPlayerLeftArena : MonoBehaviour
 {
     private TrailRenderer trail;
 
-    public void TurnTrailEmitingON(Transform trans)
+    public void TurnTrailEmitingON(object obj, Transform trans)
     {
         StartCoroutine(TurnTrailEmitingONAfterASecond(trans));
     }
@@ -19,7 +18,7 @@ public class RestartTrailOnPlayerLeftArena : MonoBehaviour
         trail.emitting = true;
     }
 
-    public void TurnTrailEmitingOFF(Transform trans)
+    public void TurnTrailEmitingOFF(object obj, Transform trans)
     {
         StartCoroutine(TurnTrailEmitingOFFAfterASecond(trans));
     }
@@ -34,12 +33,12 @@ public class RestartTrailOnPlayerLeftArena : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerInArenaEvent += TurnTrailEmitingON;
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += TurnTrailEmitingOFF;
+        PlayerInOutOfArenaTrigger.PlayerEnteredArenaEvent += TurnTrailEmitingON;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent += TurnTrailEmitingOFF;
     }
     private void OnDisable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerInArenaEvent -= TurnTrailEmitingON;
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= TurnTrailEmitingOFF;
+        PlayerInOutOfArenaTrigger.PlayerEnteredArenaEvent -= TurnTrailEmitingON;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent -= TurnTrailEmitingOFF;
     }
 }

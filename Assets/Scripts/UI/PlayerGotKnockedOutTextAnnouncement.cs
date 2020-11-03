@@ -21,7 +21,7 @@ public class PlayerGotKnockedOutTextAnnouncement : MonoBehaviour
         parantePanelImage.color = Color.clear;
     }
 
-    void PlayerLeftArena(Transform trans)
+    void PlayerLeftArena(object obj, Transform trans)
     {
         StartCoroutine(DisplayText(trans));
     }
@@ -38,12 +38,12 @@ public class PlayerGotKnockedOutTextAnnouncement : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += PlayerLeftArena;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent += PlayerLeftArena;
 
     }
     private void OnDisable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= PlayerLeftArena;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent -= PlayerLeftArena;
 
     }
 }

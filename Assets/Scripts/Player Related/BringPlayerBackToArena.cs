@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class BringPlayerBackToArena : MonoBehaviour
@@ -9,7 +10,7 @@ public class BringPlayerBackToArena : MonoBehaviour
     public Vector3 arenaBringBackPosition;
 
 
-    public void BringBack(Transform trans)
+    public void BringBack(object sender, Transform trans)
     {
         StartCoroutine(BringBackAfterDelay(trans, delay));
 
@@ -49,10 +50,10 @@ public class BringPlayerBackToArena : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += BringBack;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent += BringBack;
     }
     private void OnDisable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= BringBack;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent -= BringBack;
     }
 }

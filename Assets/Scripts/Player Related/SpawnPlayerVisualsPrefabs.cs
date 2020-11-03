@@ -19,7 +19,7 @@ public class SpawnPlayerVisualsPrefabs : SpawnCharacterVisualsPrefab
 
         playersInGameSO.playerVisualsGO.Add(prefabInstance);
 
-        RaiseOnVisuasSpawned(prefabInstance);
+        RaiseOnVisualsSpawned(prefabInstance);
 
         return prefabInstance;
     }

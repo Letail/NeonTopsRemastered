@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    void AddToPlayersDeathCounter(Transform trans)
+    void AddToPlayersDeathCounter(object obj, Transform trans)
     {
         //Searching our cash for this transform
         for (int i = 0; i < playersTransList.Count; i++)
@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         //Cashing this transform since we didn't find it earlier
-        int playerID = trans.GetComponent<PlayerPropertiesHolder>().playerProperties.playerID;
+        int playerID = trans.GetComponentInParent<PlayerPropertiesHolder>().playerProperties.playerID;
         playersTransList[playerID] = trans;
         playersPropertiesList[playerID].playerDeaths++;
 
@@ -60,11 +60,11 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent += AddToPlayersDeathCounter;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent += AddToPlayersDeathCounter;
     }
     private void OnDisable()
     {
-        PlayerInOutOfArenaTrigger.OnPlayerOutOfArenaEvent -= AddToPlayersDeathCounter;
+        PlayerInOutOfArenaTrigger.PlayerLeftArenaEvent -= AddToPlayersDeathCounter;
     }
 
 }

@@ -6,6 +6,8 @@ public abstract class SpawnCharacterVisualsPrefab : MonoBehaviour
     //public delegate void OnVisualsSpawned(GameObject instance);
     //public static event OnVisualsSpawned OnVisualsSpawnedEvent;
 
+    // The event. Note that by using the generic EventHandler<T> event type
+    // we do not need to declare a separate delegate type.
     public static event EventHandler<GameObject> VisualsSpawnedEvent;
 
 
@@ -21,7 +23,7 @@ public abstract class SpawnCharacterVisualsPrefab : MonoBehaviour
 
     public abstract GameObject Spawn();
 
-    protected virtual void RaiseOnVisuasSpawned(GameObject instance)
+    protected virtual void RaiseOnVisualsSpawned(GameObject instance)
     {
         VisualsSpawnedEvent?.Invoke(this, instance);
     }
