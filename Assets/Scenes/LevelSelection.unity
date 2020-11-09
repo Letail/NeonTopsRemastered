@@ -7639,7 +7639,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37444
+  m_Name: pb_Mesh23536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8424,6 +8424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557532d077d1151449c69872c27c96ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersInGameSO: {fileID: 0}
 --- !u!1 &953740590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8478,7 +8479,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 932306491335566231, guid: 4fe92b81d4c303843bca2f152b656b94, type: 3}
+  m_PlayerPrefab: {fileID: 3416653993740010619, guid: e226cb2f7f10d2b46b1c6025a59a70ed, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -8514,7 +8515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3cdf14fd86b32448f2b53edeb7b84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraMultiTarget: {fileID: 21758955}
+  playersInGameSO: {fileID: 0}
 --- !u!114 &953740594
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private void OnPlayerJoined(PlayerInput playerInput)
     {
         ActivateStand(playerInput);
-        TakeControlOfSpawnedPlayer(playerInput);
+        //TakeControlOfSpawnedPlayer(playerInput);
 
         playersReadyState.Add(false);
         playersSkinChosenIndex.Add(0); //They all start at index 0.
