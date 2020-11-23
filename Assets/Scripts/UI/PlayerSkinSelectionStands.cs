@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
-using System.Collections;
-using UnityEngine.UI;
-using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerSkinSelectionStands : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     [Header("Everyone Ready Countdown")]
     [SerializeField] private float countDownTime;
     [SerializeField] private Slider countDownSlider;
-
 
     [Header("Objects")]
     [SerializeField] private List<GameObject> stands;
@@ -63,7 +61,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
         //Subscribing to Events
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
-        HandleOnNavigateMessages.OnPlayerNavigateEvent += SwitchModel;
+        HandleOnNavigateMessages.PlayerNavigateEvent += SwitchModel;
         OnPlayerPaused.OnPausedEvent += LockChoice;
     }
 
@@ -71,7 +69,6 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private void OnPlayerJoined(PlayerInput playerInput)
     {
         ActivateStand(playerInput);
-        //TakeControlOfSpawnedPlayer(playerInput);
 
         playersReadyState.Add(false);
         playersSkinChosenIndex.Add(0); //They all start at index 0.
@@ -83,15 +80,13 @@ public class PlayerSkinSelectionStands : MonoBehaviour
         playerInputs.Add(playerInput);
 
         playerInput.GetComponent<PlayerShowcaseMode>().EnableShowcase(hide: true);
-        //playerInput.transform.position = modelsPositions[playerInputs.IndexOf(playerInput)].transform.position;
     }
 
-    public void SwitchModel(int playerID, Vector2 navigation)
+    public void SwitchModel(object sender, PlayerUINavigation args)
     {
         //ChangeDisplayedSkin() will return the index of the current skin chosen.
-        playersSkinChosenIndex[playerID] = skinHolders[playerID].ChangeDisplayedSkin(navigation);
+        playersSkinChosenIndex[args.playerId] = skinHolders[args.playerId].ChangeDisplayedSkin(args.navigateValue);
     }
-
 
     void LockChoice(int playerId)
     {
@@ -102,7 +97,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
             playersReadyState[playerId] = true;
 
             //If everyone has finished choosing, we can finish the skin selection.
-            if(CheckIfEveryoneIsReady() && CheckIfAllHaveDifferentSkins()) FinishSkinSelection();
+            if (CheckIfEveryoneIsReady() && CheckIfAllHaveDifferentSkins()) FinishSkinSelection();
         }
         else
         {
@@ -122,7 +117,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
                 StopCountDown();
                 return false; //if one player is not ready, then not everyone is ready
             }
-        }        
+        }
         return true;
     }
 
@@ -136,7 +131,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
         for (int i = 1; i < playersSkinChosenIndex.Count; i++)
         {
-            if(skinIndexChecked.Contains(playersSkinChosenIndex[i]))
+            if (skinIndexChecked.Contains(playersSkinChosenIndex[i]))
             {
                 //The skinIndexChecked already contained this value,
                 //so it means two players have chosen the same skin index.
@@ -167,7 +162,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private void FinishSkinSelection()
     {
-        if(countDownCoroutine != null) StopCoroutine(countDownCoroutine);
+        if (countDownCoroutine != null) StopCoroutine(countDownCoroutine);
         countDownCoroutine = StartCoroutine(CountDownStart(countDownTime));
     }
 
@@ -179,10 +174,10 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private IEnumerator CountDownStart(float waitTime)
     {
-        if(waitTime == 0) Debug.LogError("waitTime cannot be zero");
+        if (waitTime == 0) Debug.LogError("waitTime cannot be zero");
         countDownSlider.gameObject.SetActive(true);
         float counter = 0;
-        while(counter < waitTime)
+        while (counter < waitTime)
         {
             //Increment Timer until counter >= waitTime
             counter += Time.deltaTime;
@@ -196,11 +191,11 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private void OnDisable()
     {
-        if(PlayerInputManager.instance != null)
+        if (PlayerInputManager.instance != null)
         {
             PlayerInputManager.instance.onPlayerJoined -= ActivateStand;
             PlayerInputManager.instance.onPlayerJoined -= TakeControlOfSpawnedPlayer;
         }
-        HandleOnNavigateMessages.OnPlayerNavigateEvent -= SwitchModel;
+        HandleOnNavigateMessages.PlayerNavigateEvent -= SwitchModel;
     }
 }

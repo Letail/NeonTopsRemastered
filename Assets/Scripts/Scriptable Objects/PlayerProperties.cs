@@ -6,4 +6,5 @@ public class PlayerProperties : ScriptableObject
     public int playerID; //0-indexed
     public int playerDeaths;
 
+    public int skinToUseIndex;
 }
