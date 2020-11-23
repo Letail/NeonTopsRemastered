@@ -1,33 +1,23 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class FreezeFrame : MonoBehaviour
 {
     [SerializeField]
-    [Range(0,1)]
+    [Range(0, 1)]
     private float freezeDuration;
-    private float pendingFreezeDuration = 0;
     private bool isFrozen;
     private float originalTimeScale;
 
-    //private void Update()
-    //{
-    //    if(isFrozen ==  false && pendingFreezeDuration != 0)
-    //    {
-    //        StartCoroutine(DoFreeze);
-    //    }
-    //}
     private void Awake()
     {
         isFrozen = false;
-        OnPlayerCollFreezeFrame.OnPlayerCollEvent += Freeze;
+        OnPlayerCollFreezeFrame.OnPlayerCollisionEvent += Freeze;
     }
-    public void Freeze()
+    public void Freeze(object sender, EventArgs e)
     {
-        if(isFrozen == false) StartCoroutine(DoFreeze());
+        if (isFrozen == false) StartCoroutine(DoFreeze());
     }
 
     IEnumerator DoFreeze()
@@ -46,6 +36,6 @@ public class FreezeFrame : MonoBehaviour
 
     private void OnDisable()
     {
-        OnPlayerCollFreezeFrame.OnPlayerCollEvent -= Freeze;
+        OnPlayerCollFreezeFrame.OnPlayerCollisionEvent -= Freeze;
     }
 }

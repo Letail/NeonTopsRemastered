@@ -36,15 +36,12 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
     private List<PlayerInput> playerInputs;
 
-    private bool allHaveDifferentSkins;
     private bool quitCountDown;
 
     private Coroutine countDownCoroutine;
 
     private void Start()
     {
-        allHaveDifferentSkins = false;
-
         //Initializing Lists
         playersReadyState = new List<bool>();
         playersSkinChosenIndex = new List<int>();
@@ -152,7 +149,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
         }
         //If the for loop never returns false, then that means they all
         //have different skin indexes and we can return true.
-        allHaveDifferentSkins = true;
+
         return true;
     }
 

@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelSelectionFinish : MonoBehaviour
 {
-    public delegate void FinishSelection();
-    public static event FinishSelection FinishSelectionEvent;
+    public static event EventHandler FinishSelectionEvent;
 
     [Header("Scenes Indexes")]
     [SerializeField] private int multiplayerSceneIndex;
@@ -16,7 +14,7 @@ public class LevelSelectionFinish : MonoBehaviour
         FinishSelectionEvent += LoadMultiplayerScene;
     }
 
-    public void LoadMultiplayerScene()
+    public void LoadMultiplayerScene(object sender, EventArgs e)
     {
         SceneManager.LoadSceneAsync(multiplayerSceneIndex);
     }
