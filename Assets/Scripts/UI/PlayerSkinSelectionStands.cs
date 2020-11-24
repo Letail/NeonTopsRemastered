@@ -29,7 +29,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     [SerializeField] private int multiplayerSceneIndex;
 
     private List<bool> playersReadyState;
-    private List<int> playersSkinChosenIndex;
+    private List<int> playersChosenSkinIndex;
     private List<int> skinIndexChecked;
 
     private List<PlayerInput> playerInputs;
@@ -42,7 +42,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     {
         //Initializing Lists
         playersReadyState = new List<bool>();
-        playersSkinChosenIndex = new List<int>();
+        playersChosenSkinIndex = new List<int>();
         skinIndexChecked = new List<int>();
         playerInputs = new List<PlayerInput>();
         skinHolders = new List<SkinHolder>();
@@ -69,23 +69,18 @@ public class PlayerSkinSelectionStands : MonoBehaviour
     private void OnPlayerJoined(PlayerInput playerInput)
     {
         ActivateStand(playerInput);
-
-        playersReadyState.Add(false);
-        playersSkinChosenIndex.Add(0); //They all start at index 0.
-
-    }
-
-    private void TakeControlOfSpawnedPlayer(PlayerInput playerInput)
-    {
         playerInputs.Add(playerInput);
 
-        playerInput.GetComponent<PlayerShowcaseMode>().EnableShowcase(hide: true);
+        playersReadyState.Add(false);
+        playersChosenSkinIndex.Add(0); //They all start at index 0.
+
     }
 
     public void SwitchModel(object sender, PlayerUINavigation args)
     {
         //ChangeDisplayedSkin() will return the index of the current skin chosen.
-        playersSkinChosenIndex[args.playerId] = skinHolders[args.playerId].ChangeDisplayedSkin(args.navigateValue);
+        playersChosenSkinIndex[args.playerId] = skinHolders[args.playerId].ChangeDisplayedSkin(args.navigateValue);
+        playerInputs[args.playerId].GetComponent<PlayerPropertiesHolder>().playerProperties.skinToUseIndex = playersChosenSkinIndex[args.playerId];
     }
 
     void LockChoice(int playerId)
@@ -127,11 +122,11 @@ public class PlayerSkinSelectionStands : MonoBehaviour
 
         //We don't need to check if the first player has the same
         //skin index as anyone else, since they are the first to be checked.
-        skinIndexChecked.Add(playersSkinChosenIndex[0]);
+        skinIndexChecked.Add(playersChosenSkinIndex[0]);
 
-        for (int i = 1; i < playersSkinChosenIndex.Count; i++)
+        for (int i = 1; i < playersChosenSkinIndex.Count; i++)
         {
-            if (skinIndexChecked.Contains(playersSkinChosenIndex[i]))
+            if (skinIndexChecked.Contains(playersChosenSkinIndex[i]))
             {
                 //The skinIndexChecked already contained this value,
                 //so it means two players have chosen the same skin index.
@@ -139,7 +134,7 @@ public class PlayerSkinSelectionStands : MonoBehaviour
             }
             else
             {
-                skinIndexChecked.Add(playersSkinChosenIndex[i]);
+                skinIndexChecked.Add(playersChosenSkinIndex[i]);
             }
         }
         //If the for loop never returns false, then that means they all
@@ -194,7 +189,6 @@ public class PlayerSkinSelectionStands : MonoBehaviour
         if (PlayerInputManager.instance != null)
         {
             PlayerInputManager.instance.onPlayerJoined -= ActivateStand;
-            PlayerInputManager.instance.onPlayerJoined -= TakeControlOfSpawnedPlayer;
         }
         HandleOnNavigateMessages.PlayerNavigateEvent -= SwitchModel;
     }

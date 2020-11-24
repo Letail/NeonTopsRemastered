@@ -6,10 +6,15 @@ public class SpawnPlayerVisualsPrefabs : SpawnCharacterVisualsPrefab
     [SerializeField] private bool alsoSpawnDirSphere;
     [SerializeField] private DirectionSphereSpawnerAndManager directionSphereSpawnerAndManager;
 
+    [SerializeField] private GameObjectListSO modelsSkinList;
+
     public override GameObject Spawn()
     {
         //This prefab instance will be a child of the "Player Holder Prefab"
-        prefabInstance = Instantiate(bodyPrefab, transform.parent);
+
+        GameObject skin = modelsSkinList.list[GetComponentInParent<PlayerPropertiesHolder>().playerProperties.skinToUseIndex];
+
+        prefabInstance = Instantiate(skin, transform.parent);
         prefabInstance.GetComponent<CharacterVisualObject>().objectToFollow = this.gameObject;
 
         if (alsoSpawnDirSphere)

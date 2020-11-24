@@ -1,10 +1,21 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 public class ManagePlayer : MonoBehaviour
 {
     [SerializeField] private Vector3 startingPosition;
     public AddPlayerToPlayersInGameSO addPlayerToPlayersInGameSO;
+
+    private void Start()
+    {
+        LevelWasLoaded.MainLevelWasLoadedEvent += EnablePlayer;
+    }
+
+    private void EnablePlayer(object sender, EventArgs e)
+    {
+        EnableAllChildren();
+    }
 
     [ContextMenu("EnableAllChildren")]
     private void EnableAllChildren()

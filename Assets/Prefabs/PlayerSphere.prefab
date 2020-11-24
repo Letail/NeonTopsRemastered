@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOnAwake: 1
-  bodyPrefab: {fileID: 7608672052538027114, guid: d9af59061ef41ce438630bd16a0e9ad5, type: 3}
   playersInGameSO: {fileID: 11400000, guid: c76c9a84e8698ac4cb53f4661d7b140d, type: 2}
   alsoSpawnDirSphere: 1
   directionSphereSpawnerAndManager: {fileID: 7637197743002806158}
+  modelsSkinList: {fileID: 11400000, guid: ebb2f91f02ba72045bbada750fb1c68a, type: 2}
